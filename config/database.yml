@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: bard_development
+  database: dm_tools_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: bard_test
+  database: dm_tools_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: bard_production
+  database: dm_tools_production
   username: bard
-  password: <%= ENV["BARD_DATABASE_PASSWORD"] %>
+  password: <%= ENV["DM_TOOLS_DATABASE_PASSWORD"] %>
