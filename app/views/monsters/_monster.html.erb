@@ -49,6 +49,11 @@
   </p>
 
   <p>
+    <strong><%= t 'general.experience' %>:</strong>
+    <%= monster.xp.to_s +  ' ' + t('general.xp') %>
+  </p>
+
+  <p>
     <strong><%= t 'creature.size' %>:</strong>
     <%= t ('general.' + monster.size) %>
   </p>
