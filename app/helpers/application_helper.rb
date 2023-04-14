@@ -164,6 +164,15 @@ module ApplicationHelper
     html.html_safe
   end
 
+  #PROJECT HELPERS
+  def feet_to_m(distance)
+    distance/5*(1.5)
+  end
+
+  def hability_mod(hab)
+    (hab/2) - 5
+  end
+
   private
   def collapse_count
     @collapse += 1
