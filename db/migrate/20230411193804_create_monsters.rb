@@ -11,6 +11,6 @@ class CreateMonsters < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index: :monsters, :name, name: 'index_monsters_on_name', unique: true
+    add_index :monsters, :name, unique: true
   end
 end
