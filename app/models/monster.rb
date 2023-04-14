@@ -8,6 +8,15 @@ class Monster < ApplicationRecord
     gargantuan: 5
   }
 
+  def monster_name
+    full_name = ''
+    name.split(' ').each do |n|
+      full_name += n.capitalize + ' '
+    end
+
+    full_name.chop
+  end
+
   def xp
     if %w[1/8 1/4 1/2 1].include?(challange_rating)
       group = challange_rating.split("/")
