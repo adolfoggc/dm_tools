@@ -89,47 +89,47 @@ class Monster < ApplicationRecord
   end
 
   def dexterity
-    abilities[2,4].to_i
+    abilities[2,2].to_i
   end
 
   def constitution
-    abilities[4,6].to_i
+    abilities[4,2].to_i
   end
 
-  def inteligence
-    abilities[6,8].to_i
+  def intelligence
+    abilities[6,2].to_i
   end
 
   def wisdom
-    abilities[8,10].to_i
+    abilities[8,2].to_i
   end
 
   def charisma
-    abilities[10,12].to_i
+    abilities[10,2].to_i
   end
 
   def strength_mod
-    ability_mod(abilities[0,2].to_i)
+    ability_mod(strength)
   end
 
   def dexterity_mod
-    ability_mod(abilities[2,4].to_i)
+    ability_mod(dexterity)
   end
 
   def constitution_mod
-    ability_mod(abilities[4,6].to_i)
+    ability_mod(constitution)
   end
 
-  def inteligence_mod
-    ability_mod(abilities[6,8].to_i)
+  def intelligence_mod
+    ability_mod(intelligence)
   end
 
   def wisdom_mod
-    ability_mod(abilities[8,10].to_i)
+    ability_mod(wisdom)
   end
 
   def charisma_mod
-    ability_mod(abilities[10,12].to_i)
+    ability_mod(charisma)
   end
 
   private
