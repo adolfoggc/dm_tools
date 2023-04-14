@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_11_193804) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_14_011601) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_193804) do
     t.string "speed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "abilities"
     t.index ["name"], name: "index_monsters_on_name", unique: true
   end
 
