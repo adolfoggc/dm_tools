@@ -141,11 +141,16 @@ class Monster < ApplicationRecord
     ability_mod(charisma)
   end
 
-  private
-  def feet_to_m(distance)
-    distance/5*(1.5)
+  def total_speed
+    if I18n.locale.to_s == 'en'
+      speed + ' foot'.pluralize(speed.to_i)
+    else
+      value = speed.to_i/5*(1.5)
+      value.to_s.chop.chop + ' metro'.pluralize(value)
+    end
   end
 
+  private
   def ability_mod(ab)
     (ab/2) - 5
   end
