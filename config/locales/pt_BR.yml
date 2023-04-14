@@ -1,2 +1,23 @@
 pt_BR:
   hello: "Olá mundo"
+  general:
+    tiny: 'Miúdo'
+    small: 'Pequeno'
+    medium: "Médio"
+    large: "Grande"
+    huge: "Enorme"
+    gargantuan: "Colossal"
+  creature:
+    name: "Nome"
+    speed: "Deslocamento"
+    size: "Tamanho"
+    str: "For"
+    dex: "Des"
+    con: "Con"
+    int: "Int"
+    wis: "Sab"
+    cha: "Car"
+    ac: "CA"
+    armor_class: "Classe de Armadura"
+    challange_rating: "Nível de Desafio"
+    hp: 'PVs'
