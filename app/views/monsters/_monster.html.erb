@@ -1,61 +1,61 @@
 <div id="<%= dom_id monster %>">
   <p>
-    <strong>Name:</strong>
+    <strong><%= t 'creature.name' %>:</strong>
     <%= monster.monster_name %>
   </p>
 
   <p>
     <div class="row">
       <div class="col">
-        <strong>Str</strong>
+        <strong><%= t 'creature.str' %></strong>
         <%= monster.strength %> (<%= monster.strength_mod %>)
       </div>
       <div class="col">
-        <strong>Dex</strong>
+        <strong><%= t 'creature.dex' %></strong>
         <%= monster.dexterity %> (<%= monster.dexterity_mod %>)
       </div>
       <div class="col">
-        <strong>Con</strong>
+        <strong><%= t 'creature.con' %></strong>
         <%= monster.constitution %> (<%= monster.constitution_mod %>)
       </div>
       <div class="col">
-        <strong>Int</strong>
+        <strong><%= t 'creature.int' %></strong>
         <%= monster.intelligence %> (<%= monster.intelligence_mod %>)
       </div>
       <div class="col">
-        <strong>Wis</strong>
+        <strong><%= t 'creature.wis' %></strong>
         <%= monster.wisdom %> (<%= monster.wisdom_mod %>)
       </div>
       <div class="col">
-        <strong>Cha</strong>
+        <strong><%= t 'creature.cha' %></strong>
         <%= monster.charisma %> (<%= monster.charisma_mod %>)
       </div>
     </div>
   </p>
 
   <p>
-    <strong>Challange rating:</strong>
+    <strong><%= t 'creature.challange_rating' %>:</strong>
     <%= monster.challange_rating %>
   </p>
 
   <p>
-    <strong>Ac:</strong>
+    <strong><%= t 'creature.ac' %>:</strong>
     <%= monster.ac %>
   </p>
 
   <p>
-    <strong>Hp:</strong>
+    <strong><%= t 'creature.hp' %>:</strong>
     <%= monster.hp %>
   </p>
 
   <p>
-    <strong>Size:</strong>
-    <%= monster.size %>
+    <strong><%= t 'creature.size' %>:</strong>
+    <%= t ('general.' + monster.size) %>
   </p>
 
   <p>
-    <strong>Speed:</strong>
-    <%= monster.speed %>
+    <strong><%= t 'creature.speed' %>:</strong>
+    <%= monster.total_speed %>
   </p>
 
 </div>
