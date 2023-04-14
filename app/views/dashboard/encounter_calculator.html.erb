@@ -1,0 +1,6 @@
+<div>
+  <p>
+    <%= select_tag(:monster, options_for_select(@monsters.collect { |m| [m.name.humanize.capitalize, m.challange_rating]})) %>
+  </p>
+  <%= button_tag('Ok', type: :button) %>
+</div>

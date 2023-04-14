@@ -15,6 +15,9 @@
   <%= sidebar_element('Início', 'fas fa-home', auth_home_path) %>
 
   <%# SIDEBAR HELPERS AREA %>
+
+  <%= sidebar_element(t('general.monsters'), 'fa-skull', monsters_path) %>
+  <%= collapse_elements(t('general.tools'), 'fa-dice-d20', [t('general.calculators')], [[t('general.encounter_calculator')]], [[encounter_calculator_path]]) %>
   <%# END OF SIDEBAR HELPERS AREA %>
   
   <!-- Divider -->

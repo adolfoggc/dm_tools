@@ -9,6 +9,10 @@ pt_BR:
     gargantuan: "Colossal"
     xp: "Exp"
     experience: "Experiência"
+    monsters: "Monstros"
+    tools: "Ferramentas"
+    calculators: "Calculadoras"
+    encounter_calculator: "Calculador de Encontros"
   creature:
     name: "Nome"
     speed: "Deslocamento"
