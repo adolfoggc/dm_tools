@@ -5,6 +5,35 @@
   </p>
 
   <p>
+    <div class="row">
+      <div class="col">
+        <strong>Str</strong>
+        <%= monster.strength %> (<%= monster.strength_mod %>)
+      </div>
+      <div class="col">
+        <strong>Dex</strong>
+        <%= monster.dexterity %> (<%= monster.dexterity_mod %>)
+      </div>
+      <div class="col">
+        <strong>Con</strong>
+        <%= monster.constitution %> (<%= monster.constitution_mod %>)
+      </div>
+      <div class="col">
+        <strong>Int</strong>
+        <%= monster.intelligence %> (<%= monster.intelligence_mod %>)
+      </div>
+      <div class="col">
+        <strong>Wis</strong>
+        <%= monster.wisdom %> (<%= monster.wisdom_mod %>)
+      </div>
+      <div class="col">
+        <strong>Cha</strong>
+        <%= monster.charisma %> (<%= monster.charisma_mod %>)
+      </div>
+    </div>
+  </p>
+
+  <p>
     <strong>Challange rating:</strong>
     <%= monster.challange_rating %>
   </p>
