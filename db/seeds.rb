@@ -25,3 +25,21 @@ else
 
   puts 'Prepare for the harvest!'
 end
+
+#seed data
+monster_data = {
+  1 => {name: 'goblin', challange_rating: "1/4",  ac: 11,  hp: '2d6',  size: "small", speed: 30, abilities: '081410100808'}
+}
+
+#seed proccess
+puts message('monsters')
+index = Monster.count
+added = 0
+while index < monster_data.count do
+  index += 1
+  Monster.create(monster_data[index])
+  added += 1
+end
+
+puts 'Added ' + added.to_s + ' monster'.pluralize(added)
+puts ''
