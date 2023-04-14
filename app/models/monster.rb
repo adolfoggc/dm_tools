@@ -1,4 +1,12 @@
 class Monster < ApplicationRecord
+  enum size: {
+    tiny: 0,
+    small: 1,
+    medium: 2,
+    large: 3,
+    huge: 4,
+    gargantuan: 5
+  }
 
   def xp
     if %w[1/8 1/4 1/2 1].include?(challange_rating)
@@ -71,5 +79,65 @@ class Monster < ApplicationRecord
     end
 
     value
+  end
+
+  def converted_speed
+    feet_to_m(speed)
+  end
+  def strength
+    abilities[0,2].to_i
+  end
+
+  def dexterity
+    abilities[2,4].to_i
+  end
+
+  def constitution
+    abilities[4,6].to_i
+  end
+
+  def inteligence
+    abilities[6,8].to_i
+  end
+
+  def wisdom
+    abilities[8,10].to_i
+  end
+
+  def charisma
+    abilities[10,12].to_i
+  end
+
+  def strength_mod
+    ability_mod(abilities[0,2].to_i)
+  end
+
+  def dexterity_mod
+    ability_mod(abilities[2,4].to_i)
+  end
+
+  def constitution_mod
+    ability_mod(abilities[4,6].to_i)
+  end
+
+  def inteligence_mod
+    ability_mod(abilities[6,8].to_i)
+  end
+
+  def wisdom_mod
+    ability_mod(abilities[8,10].to_i)
+  end
+
+  def charisma_mod
+    ability_mod(abilities[10,12].to_i)
+  end
+
+  private
+  def feet_to_m(distance)
+    distance/5*(1.5)
+  end
+
+  def ability_mod(ab)
+    (ab/2) - 5
   end
 end
