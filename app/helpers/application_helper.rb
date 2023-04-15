@@ -1,4 +1,13 @@
 module ApplicationHelper
+  #buttons and links
+  def easy_link(text, style, icon, path)
+    html = '<a href="' + path +'" class="d-none d-sm-inline-block btn btn-sm btn-'+ style +' shadow-sm">'
+    html += '<i class="' + icon + ' fa-sm text-white-50"></i>' if icon.present? 
+    html += text
+    html += '</a>'
+    html.html_safe
+  end
+
 
   #element helpers
   def value_card(text, value, style, icon, link = '')
