@@ -53,28 +53,32 @@
     target = '#'+id+'_name'
     count = get_count(target) + 1
     $(target).html(new_text(id, count))
-    update_count(target, count)
+    update_count(id, count)
   }
 
   function less(id){
     target = '#'+id+'_name'
     count = get_count(target) - 1
     $(target).html(new_text(id, count))
-    update_count(target, count)
+    update_count(id, count)
   }
 
   function get_count(target){
     return parseInt($(target).data('count'))
   }
 
-  function update_count(target, count){
-    $(target).data('count', count)
+  function update_count(id, count){
+    if(count == 0){
+      $('#'+id).remove()
+    } else {
+      $('#'+id+'_name').data('count', count)
+    }
   }
 
   function new_text(id, count){
     txt = id
     if(count != 1){
-      txt += ' ' + count
+      txt += ' x' + count
     }
     return txt
   }
