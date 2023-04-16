@@ -1,13 +1,21 @@
 module ApplicationHelper
   #buttons and links
-  def easy_link(text, style, icon, path)
-    html = '<a href="' + path +'" class="d-none d-sm-inline-block btn btn-sm btn-'+ style +' shadow-sm">'
-    html += '<i class="' + icon + ' fa-sm text-white-50"></i>' if icon.present? 
+  def easy_link(text, style, path, options={event_type: '', event_method: '', icon: ''})
+    html = '<a ' 
+    html += options[:event_type] + '="' + options[:event_method] + '"' if options[:event_type].present?
+    html += ' href="' + path + '" class="d-none d-sm-inline-block btn btn-sm btn-'+ style + ' shadow-sm">'
+    html += '<i class="' + options[:icon] + ' fa-sm text-white-50"></i>' if options[:icon].present? 
     html += text
     html += '</a>'
     html.html_safe
   end
 
+  def easy_button(text, style, options={event_type: '', event_method: '', icon: ''})
+    html = '<button class="d-none d-sm-inline-block btn btn-sm btn-' + style + ' shadow-sm"'
+    html += ' ' + options[:event_type] + '="' + options[:event_method] +'"' if options[:event_type].present?
+    html += '>' + text +'</button>'
+    html.html_safe
+  end
 
   #element helpers
   def value_card(text, value, style, icon, link = '')
