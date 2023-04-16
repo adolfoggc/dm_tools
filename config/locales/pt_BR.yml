@@ -13,6 +13,7 @@ pt_BR:
     tools: "Ferramentas"
     calculators: "Calculadoras"
     encounter_calculator: "Calculador de Encontros"
+    add: 'Adicionar'
   creature:
     name: "Nome"
     speed: "Deslocamento"
