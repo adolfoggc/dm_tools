@@ -2,5 +2,80 @@
   <p>
     <%= select_tag(:monster, options_for_select(@monsters.collect { |m| [m.name.humanize.capitalize, m.challange_rating]})) %>
   </p>
-  <%= button_tag('Ok', type: :button) %>
+  <%= easy_button(t('general.add'), 'primary', {event_type: 'onclick', event_method: 'check_monsters()'}) %>
+  
+  <br>
+  <div id="encounter_area" class="row">
+  </div>
 </div>
+
+<script>
+  function check_monsters(){
+    monster = $('#monster option:selected').text()
+    challange = $('#monster').val()
+    if($('#'+monster).length == 0){
+      add_monster(monster, challange)
+    } else {
+      more(monster)
+    }
+  }
+
+  function add_monster(monster, challange){
+    html = create_card_string(monster, challange)
+    $('#encounter_area').append(html)
+  }
+
+  function create_card_string(monster, challange){
+    html =  '<div class="col-xl-3 col-md-6 mb-4" id="' + monster +'">'
+    html +=     '<div class="card border-left-' + 'primary' + ' shadow h-100 py-2">'
+    html +=          '<div class="card-body">'
+    html +=              '<div class="row no-gutters align-items-center">'
+    html +=                  '<div class="col mr-2">'
+    html +=                    '<div class="text-xs font-weight-bold text-' + 'primary' + ' text-uppercase mb-1">'
+    html +=                        challange + '</div>'
+    html +=                    '<div class="h5 mb-0 font-weight-bold text-gray-800" id="' + monster + '_name" data-count="1">'
+    html +=                      monster                              
+    html +=                    '</div>'
+    html +=                  '</div>'
+    html +=                  '<div class="col-auto">'
+    html +=                      '<i class="fa fa-minus fa-2x text-black-300" onclick="less(\'' + monster + '\')"></i>'
+    html +=                      '&nbsp;'
+    html +=                      '<i class="fa fa-plus fa-2x text-black-300"  onclick="more(\'' + monster + '\')"></i>'
+    html +=                  '</div>'
+    html +=              '</div>'
+    html +=          '</div>'
+    html +=      '</div>'
+    html +=  '</div>'
+    return html
+  }
+
+  function more(id){
+    target = '#'+id+'_name'
+    count = get_count(target) + 1
+    $(target).html(new_text(id, count))
+    update_count(target, count)
+  }
+
+  function less(id){
+    target = '#'+id+'_name'
+    count = get_count(target) - 1
+    $(target).html(new_text(id, count))
+    update_count(target, count)
+  }
+
+  function get_count(target){
+    return parseInt($(target).data('count'))
+  }
+
+  function update_count(target, count){
+    $(target).data('count', count)
+  }
+
+  function new_text(id, count){
+    txt = id
+    if(count != 1){
+      txt += ' ' + count
+    }
+    return txt
+  }
+</script>
