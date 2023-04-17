@@ -8,12 +8,14 @@ pt_BR:
     huge: "Enorme"
     gargantuan: "Colossal"
     xp: "Exp"
+    creature_total: "Total de Criaturas"
     experience: "Experiência"
     monsters: "Monstros"
     tools: "Ferramentas"
     calculators: "Calculadoras"
     encounter_calculator: "Calculador de Encontros"
-    add: 'Adicionar'
+    add: "Adicionar"
+    encounter_xp: "Exp do Encontro"
   creature:
     name: "Nome"
     speed: "Deslocamento"
