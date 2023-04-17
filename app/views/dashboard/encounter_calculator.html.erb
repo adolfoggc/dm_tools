@@ -5,7 +5,15 @@
   <%= easy_button(t('general.add'), 'primary', {event_type: 'onclick', event_method: 'check_monsters()'}) %>
   
   <br>
-  <div id="encounter_area" class="row">
+  <div class="row font-weight-bold text-primary text-uppercase mb-1 mt-3" id="encounter_xp" data-monster-count="0" data-total-xp="0">
+    <div class="col">
+      <%= t('general.creature_total') %>: 0
+    </div>
+    <div class="col">
+      <%= t('general.xp') %>: 0
+    </div>
+  </div>
+  <div id="encounter_area" class="row mt-3">
   </div>
 </div>
 
