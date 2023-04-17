@@ -17,6 +17,17 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def easy_select(id, data, options={blank: '', event_type: '', event_method: ''})
+    html =  '<select id=' + id + ' name=' + id + ' class="custom-select custom-select-sm form-control form-control-sm">'
+    html +=   '<option hidden selected>' + options[:blank] + '<opton>' if options[:blank].present?
+    data.each do |k, v|
+      html += '<option value=' + v + '>' + k + '</option>'
+    end
+    html += '</select>'
+
+    html.html_safe
+  end
+
   #element helpers
   def value_card(text, value, style, icon, link = '')
     html =  '<a href="' + link + '" class="text-decoration-none">'
