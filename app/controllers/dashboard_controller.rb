@@ -3,6 +3,9 @@ class DashboardController < ApplicationController
   end
 
   def encounter_calculator
-    @monsters = Monster.all.select('name', 'challange_rating')
+    @monsters = {}
+    Monster.all.select('name', 'challange_rating').each do |m|
+      @monsters[m.name.humanize.capitalize] = m.challange_rating
+    end
   end
 end
