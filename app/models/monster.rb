@@ -90,9 +90,6 @@ class Monster < ApplicationRecord
     value
   end
 
-  def converted_speed
-    feet_to_m(speed)
-  end
   def strength
     abilities[0,2].to_i
   end
