@@ -31,7 +31,7 @@
   function add_monster(monster, challange){
     html = create_card_string(monster, challange)
     $('#encounter_area').append(html)
-    console.log(xp(challange))
+    encounter_xp("more", challange)
   }
 
   function create_card_string(monster, challange){
@@ -63,7 +63,7 @@
     count = get_count(target) + 1
     $(target).html(new_text(id, count))
     update_count(id, count)
-    console.log(xp(challange))
+    encounter_xp("more", challange)
   }
 
   function less(id, challange){
@@ -71,7 +71,7 @@
     count = get_count(target) - 1
     $(target).html(new_text(id, count))
     update_count(id, count)
-    console.log(xp(challange))
+    encounter_xp("less", challange)
   }
 
   function get_count(target){
