@@ -28,7 +28,10 @@ end
 
 #seed data
 monster_data = {
-  1 => {name: 'goblin', challange_rating: "1/4",  ac: 11,  hp: '2d6',  size: "small", speed: 30, abilities: '081410100808'}
+  1 => {name: 'goblin', challange_rating: "1/4",  ac: 11,  hp: '2d6',  size: "small", speed: 30, abilities: '081410100808'},
+  2 => {name: 'drow', challange_rating: "1/4",  ac: 10,  hp: '3d8',  size: "medium", speed: 30, abilities: '101410111112'},
+  3 => {name: 'worg', challange_rating: "1/2",  ac: 12,  hp: '4d10+4',  size: "large", speed: 50, abilities: '161313071108'},
+  4 => {name: 'giant rat', challange_rating: "1/8",  ac: 10,  hp: '2d6',  size: "small", speed: 30, abilities: '071511021004'}
 }
 
 #seed proccess
