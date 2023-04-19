@@ -26,6 +26,22 @@ else
   puts 'Prepare for the harvest!'
 end
 
+def seed_process(object, data)
+  puts message(object.pluralize(2))
+  table = eval(object.capitalize)
+  index = table.count
+  added = 0
+  #data = eval(object + '_data')
+  while index < data.count do
+    index += 1
+    table.create(data[index])
+    added += 1
+  end
+
+  puts 'Added ' + added.to_s + ' '+ object.pluralize(added)
+  puts ''
+end
+
 #seed data
 monster_data = {
   1 => {name: 'goblin', challange_rating: "1/4",  ac: 11,  hp: '2d6',  size: "small", speed: 30, abilities: '081410100808'},
@@ -34,15 +50,5 @@ monster_data = {
   4 => {name: 'giant rat', challange_rating: "1/8",  ac: 10,  hp: '2d6',  size: "small", speed: 30, abilities: '071511021004'}
 }
 
-#seed proccess
-puts message('monsters')
-index = Monster.count
-added = 0
-while index < monster_data.count do
-  index += 1
-  Monster.create(monster_data[index])
-  added += 1
-end
-
-puts 'Added ' + added.to_s + ' monster'.pluralize(added)
-puts ''
+#seeding process
+seed_process('monster', monster_data)
