@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :armors
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
   end
   
   authenticated :user do
+    resources :armors
     resources :monsters
 
     get '/', to: 'dashboard#home', as: 'auth_home'
