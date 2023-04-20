@@ -1,62 +1,85 @@
 pt_BR:
+  #a
+  ac: "CA"
+  action: "Ação"
+  actions: "Ações"
+  add: "Adicionar"
+  armor: "Armadura"
+  armors: "Armaduras"
+  armor_class: "Classe de Armadura"
+  #b
+  breastplate: "Couraça Parcial"
+  #c
+  calculators: "Calculadoras"
+  cha: "Car"
+  chain_mail: "Cota de Malha"
+  chain_shirt: "Cota de Malhas Parcial"
+  challange_rating: "Nível de Desafio"
+  con: "Con"
+  creature_total: "Total de Criaturas"
+  #d
+  dex: "Des"
+  #e
+  encounter_calculator: "Calculador de Encontros"
+  encounter_xp: "Exp do Encontro"
+  equipments: "Equipamentos"
+  experience: "Experiência"
+  #f
+  #g
+  gargantuan: "Colossal"
+  #h
+  half_plate: "Placas Parcial"
+  heavy_armor: "Armadura Pesada"
+  helmet: "Elmo"
   hello: "Olá mundo"
-  general:
-    tiny: 'Miúdo'
-    small: 'Pequeno'
-    medium: "Médio"
-    large: "Grande"
-    huge: "Enorme"
-    gargantuan: "Colossal"
-    xp: "Exp"
-    creature_total: "Total de Criaturas"
-    experience: "Experiência"
-    monsters: "Monstros"
-    tools: "Ferramentas"
-    calculators: "Calculadoras"
-    encounter_calculator: "Calculador de Encontros"
-    add: "Adicionar"
-    encounter_xp: "Exp do Encontro"
-    light_armor: "Armadura Leve"
-    medium_armor: "Armadura Média"
-    heavy_armor: "Armadura Pesada"
-    shield: "Escudo"
-    helmet: "Elmo"
-    simple_melee_weapon: "Arma Simples Corpo-a-Corpo"
-    simple_ranged_weapon: "Arma Simples à Distância"
-    martial_melee_weapon: "Arma Marcial Corpo-a-Corpo"
-    martial_ranged_weapon: "Arma Marcial à Distância"
-    other: "Outro(a)"
-    armor: "Armadura"
-    armors: "Armaduras"
-    weapon: "Arma"
-    minute: "Minuto"
-    action: "Ação"
-    actions: "Ações"
-    padded: "Acolchoada"
-    leather: "Couro"
-    studded_leather: "Couro Batido"
-    hide: "Gibão de Peles"
-    chain_shirt: "Cota de Malhas Parcial"
-    scale_mail: "Lórica de Escamas"
-    breastplate: "Couraça Parcial"
-    half_plate: "Placas Parcial"
-    ring_mail: "Cota de Anéis"
-    chain_mail: "Cota de Malha"
-    splint: "Cota de Talas"
-    plate: "Placas"
-    shield: "Escudo"
-    equipments: "Equipamentos"
-  creature:
-    name: "Nome"
-    speed: "Deslocamento"
-    size: "Tamanho"
-    str: "For"
-    dex: "Des"
-    con: "Con"
-    int: "Int"
-    wis: "Sab"
-    cha: "Car"
-    ac: "CA"
-    armor_class: "Classe de Armadura"
-    challange_rating: "Nível de Desafio"
-    hp: 'PVs'
+  hide: "Gibão de Peles"
+  hp: 'PVs'
+  huge: "Enorme"
+  #i
+  int: "Int"
+  #j
+  #k
+  #l
+  large: "Grande"
+  leather: "Couro"
+  light_armor: "Armadura Leve"
+  #m
+  martial_melee_weapon: "Arma Marcial Corpo-a-Corpo"
+  martial_ranged_weapon: "Arma Marcial à Distância"
+  medium: "Médio"
+  medium_armor: "Armadura Média"
+  minute: "Minuto"
+  monsters: "Monstros"
+  #n
+  name: "Nome"
+  #o
+  other: "Outro(a)"
+  #p
+  padded: "Acolchoada"
+  plate: "Placas"
+  #q
+  #r
+  ring_mail: "Cota de Anéis"
+  #s
+  scale_mail: "Lórica de Escamas"
+  shield: "Escudo"
+  simple_melee_weapon: "Arma Simples Corpo-a-Corpo"
+  simple_ranged_weapon: "Arma Simples à Distância"
+  size: "Tamanho"
+  small: 'Pequeno'
+  speed: "Deslocamento"
+  splint: "Cota de Talas"
+  str: "For"
+  studded_leather: "Couro Batido"
+  #t
+  tiny: 'Miúdo'
+  tools: "Ferramentas"
+  #u
+  #v
+  #w
+  weapon: "Arma"
+  wis: "Sab"
+  #x
+  xp: "Exp"
+  #y
+  #z
