@@ -1,65 +1,65 @@
 <div id="<%= dom_id monster %>">
   <p>
-    <strong><%= t 'creature.name' %>:</strong>
+    <strong><%= t('name') %>:</strong>
     <%= monster.monster_name %>
   </p>
 
   <p>
     <div class="row">
       <div class="col">
-        <strong><%= t 'creature.str' %></strong>
+        <strong><%= t('str') %></strong>
         <%= monster.strength %> (<%= monster.strength_mod %>)
       </div>
       <div class="col">
-        <strong><%= t 'creature.dex' %></strong>
+        <strong><%= t('dex') %></strong>
         <%= monster.dexterity %> (<%= monster.dexterity_mod %>)
       </div>
       <div class="col">
-        <strong><%= t 'creature.con' %></strong>
+        <strong><%= t('con') %></strong>
         <%= monster.constitution %> (<%= monster.constitution_mod %>)
       </div>
       <div class="col">
-        <strong><%= t 'creature.int' %></strong>
+        <strong><%= t('int') %></strong>
         <%= monster.intelligence %> (<%= monster.intelligence_mod %>)
       </div>
       <div class="col">
-        <strong><%= t 'creature.wis' %></strong>
+        <strong><%= t('wis') %></strong>
         <%= monster.wisdom %> (<%= monster.wisdom_mod %>)
       </div>
       <div class="col">
-        <strong><%= t 'creature.cha' %></strong>
+        <strong><%= t('cha') %></strong>
         <%= monster.charisma %> (<%= monster.charisma_mod %>)
       </div>
     </div>
   </p>
 
   <p>
-    <strong><%= t 'creature.challange_rating' %>:</strong>
+    <strong><%= t('challange_rating') %>:</strong>
     <%= monster.challange_rating %>
   </p>
 
   <p>
-    <strong><%= t 'creature.ac' %>:</strong>
+    <strong><%= t('ac') %>:</strong>
     <%= monster.ac %>
   </p>
 
   <p>
-    <strong><%= t 'creature.hp' %>:</strong>
+    <strong><%= t('hp') %>:</strong>
     <%= monster.hp %>
   </p>
 
   <p>
-    <strong><%= t 'general.experience' %>:</strong>
-    <%= monster.xp.to_s +  ' ' + t('general.xp') %>
+    <strong><%= t('experience') %>:</strong>
+    <%= monster.xp.to_s +  ' ' + t('xp') %>
   </p>
 
   <p>
-    <strong><%= t 'creature.size' %>:</strong>
-    <%= t ('general.' + monster.size) %>
+    <strong><%= t('size') %>:</strong>
+    <%= t (monster.size) %>
   </p>
 
   <p>
-    <strong><%= t 'creature.speed' %>:</strong>
+    <strong><%= t('speed') %>:</strong>
     <%= monster.total_speed %>
   </p>
 

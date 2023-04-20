@@ -2,15 +2,15 @@
   <p>
     <%= easy_select('monster', @monsters)%>
   </p>
-  <%= easy_button(t('general.add'), 'primary', {event_type: 'onclick', event_method: 'check_monsters()'}) %>
+  <%= easy_button(t('add'), 'primary', {event_type: 'onclick', event_method: 'check_monsters()'}) %>
   
   <br>
   <div class="row font-weight-bold text-primary text-uppercase mb-1 mt-3" id="encounter_xp" data-monster-count="0" data-total-xp="0">
     <div class="col">
-      <%= t('general.creature_total') %>: 0
+      <%= t('creature_total') %>: 0
     </div>
     <div class="col">
-      <%= t('general.xp') %>: 0
+      <%= t('xp') %>: 0
     </div>
   </div>
   <div id="encounter_area" class="row mt-3">
@@ -101,10 +101,10 @@
 
   function encounter_text(monster_count, total_xp){
     txt =  '<div class="col">'
-    txt +=   '<%= t('general.creature_total') %>: ' + monster_count
+    txt +=   '<%= t('creature_total') %>: ' + monster_count
     txt += '</div>'
     txt += '<div class="col">'
-    txt +=    '<%= t('general.xp') %>: ' + total_xp
+    txt +=    '<%= t('xp') %>: ' + total_xp
     txt +=  '</div>'
 
     return txt
