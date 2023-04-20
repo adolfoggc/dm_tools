@@ -24,26 +24,26 @@ class Armor < ApplicationRecord
   def donning_armor
     case kind
     when 'light_armor'
-      '1 ' + I18n.translate('general.minute')
+      '1 ' + I18n.translate('minute')
     when 'medium_armor'
-      '5 ' + I18n.translate('general.minute').pluralize
+      '5 ' + I18n.translate('minute').pluralize
     when 'heavy_armor'
-      '10 ' + I18n.translate('general.minute').pluralize
+      '10 ' + I18n.translate('minute').pluralize
     else
-      '1 ' + I18n.translate('general.action')
+      '1 ' + I18n.translate('action')
     end 
   end
 
   def doffing_armor
     case kind
     when 'light_armor'
-      '1 ' + I18n.translate('general.minute')
+      '1 ' + I18n.translate('minute')
     when 'medium_armor'
-      '1 ' + I18n.translate('general.minute')
+      '1 ' + I18n.translate('minute')
     when 'heavy_armor'
-      '5 ' + I18n.translate('general.minute').pluralize
+      '5 ' + I18n.translate('minute').pluralize
     else
-      '1 ' + I18n.translate('general.action')
+      '1 ' + I18n.translate('action')
     end
   end
 end
