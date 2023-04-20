@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @armor %>
+
+<div>
+  <%= link_to "Edit this armor", edit_armor_path(@armor) %> |
+  <%= link_to "Back to armors", armors_path %>
+
+  <%= button_to "Destroy this armor", @armor, method: :delete %>
+</div>
