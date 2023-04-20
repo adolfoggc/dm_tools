@@ -53,19 +53,20 @@ monster_data = {
 combat_equipment_data = {
   1 =>{name: 'padded', kind: 'light_armor', ac: '11', dmg: '', weight: 8, price: 500, description: ''},
   2 =>{name: 'leather', kind: 'light_armor', ac: '11', dmg: '', weight: 10, price: 1000, description: ''},
-  3 =>{name: 'studded leather', kind: 'light_armor', ac: '12', dmg: '', weight: 13, price: 4500, description: ''},
+  3 =>{name: 'studded_leather', kind: 'light_armor', ac: '12', dmg: '', weight: 13, price: 4500, description: ''},
   
   4 =>{name: 'hide', kind: 'medium_armor', ac: '12', dmg: '', weight: 12, price: 1000, description: ''},
-  5 =>{name: 'chain shirt', kind: 'medium_armor', ac: '13', dmg: '', weight: 20, price: 3000, description: ''},
-  6 =>{name: 'scale mail', kind: 'medium_armor', ac: '14', dmg: '', weight: 45, price: 5000, description: ''},
+  5 =>{name: 'chain_shirt', kind: 'medium_armor', ac: '13', dmg: '', weight: 20, price: 3000, description: ''},
+  6 =>{name: 'scale_mail', kind: 'medium_armor', ac: '14', dmg: '', weight: 45, price: 5000, description: ''},
   7 =>{name: 'breastplate', kind: 'medium_armor', ac: '14', dmg: '', weight: 20, price: 40000, description: ''},
-  8 =>{name: 'half plate', kind: 'medium_armor', ac: '15', dmg: '', weight: 40, price: 75000, description: ''},
+  8 =>{name: 'half_plate', kind: 'medium_armor', ac: '15', dmg: '', weight: 40, price: 75000, description: ''},
   
-  9 =>{name: 'ring mail', kind: 'heavy_armor', ac: '15', dmg: '', weight: 40, price: 30000, description: ''},
-  10 =>{name: 'chain mail', kind: 'heavy_armor', ac: '16', dmg: '', weight: 55, price: 75000, description: ''},
+  9 =>{name: 'ring_mail', kind: 'heavy_armor', ac: '14', dmg: '', weight: 40, price: 30000, description: ''},
+  10 =>{name: 'chain_mail', kind: 'heavy_armor', ac: '16', dmg: '', weight: 55, price: 75000, description: ''},
   11 =>{name: 'splint', kind: 'heavy_armor', ac: '17', dmg: '', weight: 60, price: 20000, description: ''},
-  12 =>{name: 'plate', kind: 'heavy_armor', ac: '18', dmg: '', weight: 65, price: 150000, description: ''}
+  12 =>{name: 'plate', kind: 'heavy_armor', ac: '18', dmg: '', weight: 65, price: 150000, description: ''},
   
+  13 =>{name: 'shield', kind: 'shield', ac: '18', dmg: '', weight: 6, price: 1000, description: ''}
 }
 
 #seeding process
