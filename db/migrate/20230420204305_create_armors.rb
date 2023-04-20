@@ -4,8 +4,8 @@ class CreateArmors < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :kind
       t.string :ac
-      t.string :weight
-      t.string :price
+      t.integer :weight
+      t.integer :price
       t.string :description
 
       t.timestamps

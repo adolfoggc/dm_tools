@@ -18,24 +18,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_20_204305) do
     t.string "name"
     t.integer "kind"
     t.string "ac"
-    t.string "weight"
-    t.string "price"
+    t.integer "weight"
+    t.integer "price"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_armors_on_name", unique: true
-  end
-
-  create_table "combat_equipments", force: :cascade do |t|
-    t.string "name"
-    t.string "kind"
-    t.string "ac"
-    t.string "dmg"
-    t.string "weight"
-    t.string "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text "description"
   end
 
   create_table "monsters", force: :cascade do |t|
