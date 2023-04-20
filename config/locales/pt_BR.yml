@@ -28,6 +28,9 @@ pt_BR:
     other: "Outro(a)"
     armor: "Armadura"
     weapon: "Arma"
+    minute: "Minuto"
+    action: "Ação"
+    actions: "Ações"
   creature:
     name: "Nome"
     speed: "Deslocamento"
