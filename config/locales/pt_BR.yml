@@ -27,6 +27,7 @@ pt_BR:
     martial_ranged_weapon: "Arma Marcial à Distância"
     other: "Outro(a)"
     armor: "Armadura"
+    armors: "Armaduras"
     weapon: "Arma"
     minute: "Minuto"
     action: "Ação"
@@ -44,6 +45,7 @@ pt_BR:
     splint: "Cota de Talas"
     plate: "Placas"
     shield: "Escudo"
+    equipments: "Equipamentos"
   creature:
     name: "Nome"
     speed: "Deslocamento"
