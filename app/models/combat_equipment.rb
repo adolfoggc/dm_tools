@@ -1,2 +1,0 @@
-class CombatEquipment < ApplicationRecord 
-end
