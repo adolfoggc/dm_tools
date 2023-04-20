@@ -12,4 +12,12 @@ class CombatEquipment < ApplicationRecord
     other: 9
   }
 
+  def item_weight
+    if I18n.locale.to_s == 'en'
+      weight + 'lb'.pluralize(weight)
+    else
+      converted_weight = weight/2
+      converted_weight + 'kg'.pluralize(converted_weight)
+    end
+  end
 end
