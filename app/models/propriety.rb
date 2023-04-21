@@ -1,0 +1,2 @@
+class Propriety < ApplicationRecord
+end
