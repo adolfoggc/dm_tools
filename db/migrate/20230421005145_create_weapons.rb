@@ -4,9 +4,9 @@ class CreateWeapons < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :kind
       t.integer :melee_or_ranged
-      t.boolean :one_handed
+      t.boolean :one_handed, default: true
       t.string :dmg
-      t.integer :cost
+      t.integer :price
       t.integer :weight
 
       t.timestamps
