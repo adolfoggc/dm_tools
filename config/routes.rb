@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   authenticated :user do
     resources :armors
     resources :monsters
+    resources :weapons
 
     get '/', to: 'dashboard#home', as: 'auth_home'
 
