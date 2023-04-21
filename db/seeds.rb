@@ -69,6 +69,24 @@ armor_data = {
   13 =>{name: 'shield', kind: 'shield', ac: '18', weight: 6, price: 1000, description: ''}
 }
 
+weapon_data = {
+  1 => {name: 'shortsword', kind: 'martial', melee_or_ranged: 'melee', one_handed: true,  dmg: '1d6', price: 1000, weight: '2', description: ''},
+  2 => {name: 'dart', kind: 'simple', melee_or_ranged: 'ranged', one_handed: true,  dmg: '1d4', price: 5, weight: '1/4', description: ''},
+  3 => {name: 'longbow', kind: 'martial', melee_or_ranged: 'ranged', one_handed: false,  dmg: '1d8', price: 5000, weight: '2', description: ''},
+  4 => {name: 'handaxe', kind: 'simple', melee_or_ranged: 'both', one_handed: true,  dmg: '1d4', price: 500, weight: '2', description: ''},
+  5 => {name: 'javelin', kind: 'simple', melee_or_ranged: 'both', one_handed: true,  dmg: '1d6', price: 50, weight: '2', description: ''},
+  6 => {name: 'greatclub', kind: 'simple', melee_or_ranged: 'melee', one_handed: false,  dmg: '1d8', price: 20, weight: '10', description: ''},
+  7 => {name: 'longsword', kind: 'martial', melee_or_ranged: 'melee', one_handed: true,  dmg: '1d8', price: 1500, weight: '3', description: ''},
+  8 => {name: 'rapier', kind: 'martial', melee_or_ranged: 'melee', one_handed: true,  dmg: '1d8', price: 2500, weight: '2', description: ''},
+  9 => {name: 'shortbow', kind: 'simple', melee_or_ranged: 'ranged', one_handed: false,  dmg: '1d6', price: 1000, weight: '2', description: ''},
+  10 => {name: 'dagger', kind: 'simple', melee_or_ranged: 'melee', one_handed: true,  dmg: '1d4', price: 200, weight: '1', description: ''},
+  11 => {name: 'light_crossbow', kind: 'simple', melee_or_ranged: 'ranged', one_handed: false,  dmg: '1d8', price: 2500, weight: '5', description: ''},
+  12 => {name: 'quarterstaff', kind: 'simple', melee_or_ranged: 'melee', one_handed: true,  dmg: '1d6', price: 20, weight: '4', description: ''},
+  13 => {name: 'mace', kind: 'simple', melee_or_ranged: 'melee', one_handed: true,  dmg: '1d6', price: 500, weight: '4', description: ''},
+  14 => {name: 'battleaxe', kind: 'martial', melee_or_ranged: 'melee', one_handed: true,  dmg: '1d8', price: 1000, weight: '4', description: ''}
+}
+
 #seeding process
 seed_process('monster', monster_data)
 seed_process('armor', armor_data)
+seed_process('weapon', weapon_data)
