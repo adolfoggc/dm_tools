@@ -8,6 +8,7 @@ class CreateWeapons < ActiveRecord::Migration[7.0]
       t.string :dmg
       t.integer :price
       t.integer :weight
+      t.string :description
 
       t.timestamps
     end
