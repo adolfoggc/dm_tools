@@ -18,7 +18,7 @@
 
   <%= sidebar_element(t('monsters'), 'fa-skull', monsters_path) %>
   <%= collapse_elements(t('equipments'), 'fas fa-shield-alt', [''], [[t('armors'), t('weapons')]], [[armors_path, weapons_path]]) %>
-  <%= collapse_elements(t('tools'), 'fa-dice-d20', [t('calculators')], [[t('encounter_calculator')]], [[encounter_calculator_path]]) %>
+  <%= collapse_elements(t('tools'), 'fa-dice-d20', [t('calculators'), t('item_creator')], [[t('encounter_calculator')],[t('armors'), t('weapons')]], [[encounter_calculator_path], [new_armor_path, new_weapon_path]]) %>
   <%# END OF SIDEBAR HELPERS AREA %>
   
   <!-- Divider -->
