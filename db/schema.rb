@@ -58,7 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_005145) do
     t.boolean "one_handed", default: true
     t.string "dmg"
     t.integer "price"
-    t.integer "weight"
+    t.string "weight"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
