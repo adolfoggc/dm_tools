@@ -1,4 +1,7 @@
 class Armor < ApplicationRecord
+  has_many :armor_proprieties
+  has_many :proprieties, through: :armor_proprieties
+
   enum kind: {
     light_armor: 0,
     medium_armor: 1,
