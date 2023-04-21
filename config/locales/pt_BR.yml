@@ -8,6 +8,7 @@ pt_BR:
   armors: "Armaduras"
   armor_class: "Classe de Armadura"
   #b
+  battleaxe: "Machado de Batalha"
   breastplate: "Couraça Parcial"
   #c
   calculators: "Calculadoras"
@@ -18,6 +19,8 @@ pt_BR:
   con: "Con"
   creature_total: "Total de Criaturas"
   #d
+  dagger: "Adaga"
+  dart: "Dardo"
   dex: "Des"
   #e
   encounter_calculator: "Calculador de Encontros"
@@ -27,8 +30,10 @@ pt_BR:
   #f
   #g
   gargantuan: "Colossal"
+  greatclub: "Clava Grande"
   #h
   half_plate: "Placas Parcial"
+  handaxe: "Machado de Mão"
   heavy_armor: "Armadura Pesada"
   helmet: "Elmo"
   hello: "Olá mundo"
@@ -38,12 +43,17 @@ pt_BR:
   #i
   int: "Int"
   #j
+  javelin: "Azagaia"
   #k
   #l
   large: "Grande"
   leather: "Couro"
   light_armor: "Armadura Leve"
+  light_crossbow: "Besta Leve"
+  longbow: "Arco Longo"
+  longsword: "Espada Longa"
   #m
+  mace: "Maça"
   martial_melee_weapon: "Arma Marcial Corpo-a-Corpo"
   martial_ranged_weapon: "Arma Marcial à Distância"
   medium: "Médio"
@@ -58,11 +68,15 @@ pt_BR:
   padded: "Acolchoada"
   plate: "Placas"
   #q
+  quarterstaff: "Bastão"
   #r
+  rapier: "Rapieira"
   ring_mail: "Cota de Anéis"
   #s
   scale_mail: "Lórica de Escamas"
   shield: "Escudo"
+  shortbow: "Arco Curto"
+  shortsword: "Espada Curta"
   simple_melee_weapon: "Arma Simples Corpo-a-Corpo"
   simple_ranged_weapon: "Arma Simples à Distância"
   size: "Tamanho"
