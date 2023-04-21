@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_21_144342) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_21_150411) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "armor_proprieties", force: :cascade do |t|
+    t.bigint "armor_id", null: false
+    t.bigint "propriety_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["armor_id"], name: "index_armor_proprieties_on_armor_id"
+    t.index ["propriety_id"], name: "index_armor_proprieties_on_propriety_id"
+  end
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -58,6 +67,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_144342) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "weapon_proprieties", force: :cascade do |t|
+    t.bigint "weapon_id", null: false
+    t.bigint "propriety_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["propriety_id"], name: "index_weapon_proprieties_on_propriety_id"
+    t.index ["weapon_id"], name: "index_weapon_proprieties_on_weapon_id"
+  end
+
   create_table "weapons", force: :cascade do |t|
     t.string "name"
     t.integer "kind"
@@ -72,4 +90,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_144342) do
     t.index ["name"], name: "index_weapons_on_name", unique: true
   end
 
+  add_foreign_key "armor_proprieties", "armors"
+  add_foreign_key "armor_proprieties", "proprieties"
+  add_foreign_key "weapon_proprieties", "proprieties"
+  add_foreign_key "weapon_proprieties", "weapons"
 end

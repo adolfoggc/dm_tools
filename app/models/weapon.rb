@@ -1,4 +1,7 @@
 class Weapon < ApplicationRecord
+  has_many :weapon_proprieties
+  has_many :proprieties, through: :weapon_proprieties
+
   enum kind: {
     simple: 0,
     martial: 1
