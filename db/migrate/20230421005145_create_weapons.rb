@@ -7,7 +7,7 @@ class CreateWeapons < ActiveRecord::Migration[7.0]
       t.boolean :one_handed, default: true
       t.string :dmg
       t.integer :price
-      t.integer :weight
+      t.string :weight
       t.string :description
 
       t.timestamps
