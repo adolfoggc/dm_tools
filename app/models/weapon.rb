@@ -14,8 +14,8 @@ class Weapon < ApplicationRecord
     if I18n.locale.to_s == 'en'
       weight.to_s + ' lb'.pluralize(weight)
     else
-      converted_weight = (weight/2).to_i
-      converted_weight.to_s + ' kg'.pluralize(converted_weight)
+      converted_weight = (weight.to_f/2)
+      converted_weight.to_s + ' kg'
     end
   end
 end
