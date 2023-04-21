@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Proprieties</h1>
+
+<div id="proprieties">
+  <% @proprieties.each do |propriety| %>
+    <%= render propriety %>
+    <p>
+      <%= link_to "Show this propriety", propriety %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New propriety", new_propriety_path %>
