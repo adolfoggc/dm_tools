@@ -7,12 +7,6 @@ class Weapon < ApplicationRecord
     martial: 1
   }
 
-  enum melee_or_ranged: {
-    melee: 0,
-    ranged: 1,
-    both: 2
-  }
-
   def item_weight
     if I18n.locale.to_s == 'en'
       weight.to_s + ' lb'.pluralize(weight)

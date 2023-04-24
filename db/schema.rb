@@ -79,8 +79,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_150411) do
   create_table "weapons", force: :cascade do |t|
     t.string "name"
     t.integer "kind"
-    t.integer "melee_or_ranged"
-    t.boolean "one_handed", default: true
     t.string "dmg"
     t.integer "price"
     t.string "weight"
