@@ -86,7 +86,33 @@ weapon_data = {
   14 => {name: 'battleaxe', kind: 'martial', melee_or_ranged: 'melee', one_handed: true,  dmg: '1d8', price: 1000, weight: '4', description: ''}
 }
 
+propriety_data = {
+  1 => {name:'dis:_sneak', description: 'dis:_sneak_DESC'},
+  2 => {name:'min_str:_13', description: 'min_str:_13_DESC'},
+  3 => {name:'min_str:_15', description: 'min_str:_15_DESC'},
+  4 => {name:'max_dex_bonus:_2', description: 'max_dex_bonus:_2_DESC'},
+  5 => {name:'ammunition', description: 'ammunition_DESC'},
+  6 => {name:'finesse', description: 'finesse_DESC'},
+  7 => {name:'heavy', description: 'heavy_DESC'},
+  8 => {name:'light', description: 'light_DESC'},
+  9 => {name:'loading', description: 'loading_DESC'},
+  10 => {name:'range_5_15', description: 'range_5_15_DESC'},
+  11 => {name:'range_20_60', description: 'range_20_60_DESC'},
+  12 => {name:'range_25_100', description: 'range_25_100_DESC'},
+  12 => {name:'range_30_120', description: 'range_30_120_DESC'},
+  13 => {name:'range_80_320', description: 'range_80_320_DESC'},
+  14 => {name:'range_100_400', description: 'range_100_400_DESC'},
+  15 => {name:'range_150_600', description: 'range_150_600_DESC'},
+  16 => {name:'reach', description: 'reach_DESC'},
+  17 => {name:'special_lance', description: 'special_lance_DESC'},
+  18 => {name:'special_net', description: 'special_net_DESC'},
+  19 => {name:'throw', description: 'throw_DESC'},
+  20 => {name:'versatile_1d8', description: 'versatile_1d8_DESC'},
+  21 => {name:'versatile_1d10', description: 'versatile_1d10_DESC'}
+}
+
 #seeding process
 seed_process('monster', monster_data)
 seed_process('armor', armor_data)
 seed_process('weapon', weapon_data)
+seed_process('propriety', propriety_data)
