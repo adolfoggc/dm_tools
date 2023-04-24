@@ -31,7 +31,6 @@ def seed_process(object, data)
   table = eval(object.camelize)
   index = table.count
   added = 0
-  #data = eval(object + '_data')
   while index < data.count do
     index += 1
     table.create(data[index])
@@ -99,16 +98,16 @@ propriety_data = {
   10 => {name:'range_5_15', description: 'range_5_15_DESC'},
   11 => {name:'range_20_60', description: 'range_20_60_DESC'},
   12 => {name:'range_25_100', description: 'range_25_100_DESC'},
-  12 => {name:'range_30_120', description: 'range_30_120_DESC'},
-  13 => {name:'range_80_320', description: 'range_80_320_DESC'},
-  14 => {name:'range_100_400', description: 'range_100_400_DESC'},
-  15 => {name:'range_150_600', description: 'range_150_600_DESC'},
-  16 => {name:'reach', description: 'reach_DESC'},
-  17 => {name:'special_lance', description: 'special_lance_DESC'},
-  18 => {name:'special_net', description: 'special_net_DESC'},
-  19 => {name:'throw', description: 'throw_DESC'},
-  20 => {name:'versatile_1d8', description: 'versatile_1d8_DESC'},
-  21 => {name:'versatile_1d10', description: 'versatile_1d10_DESC'}
+  13 => {name:'range_30_120', description: 'range_30_120_DESC'},
+  14 => {name:'range_80_320', description: 'range_80_320_DESC'},
+  15 => {name:'range_100_400', description: 'range_100_400_DESC'},
+  16 => {name:'range_150_600', description: 'range_150_600_DESC'},
+  17 => {name:'reach', description: 'reach_DESC'},
+  18 => {name:'special_lance', description: 'special_lance_DESC'},
+  19 => {name:'special_net', description: 'special_net_DESC'},
+  20 => {name:'throw', description: 'throw_DESC'},
+  21 => {name:'versatile_1d8', description: 'versatile_1d8_DESC'},
+  22 => {name:'versatile_1d10', description: 'versatile_1d10_DESC'}
 }
 
 #seeding process
