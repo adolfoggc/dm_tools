@@ -146,3 +146,5 @@ pt_BR:
     versatile_1d8_DESC: "A arma deve pode ser utilizada com duas mãos, causando 1d8 por ataque"
     versatile_1d10: "Versátil (1d10)"
     versatile_1d10_DESC: "A arma deve pode ser utilizada com duas mãos, causando 1d10 por ataque"
+    no_dex_bonus: "CA sem Bônus de Destreza"
+    no_dex_bonus_DESC: "A armadura não permite o uso do bônus de Destreza em seu cálculo para CA"
