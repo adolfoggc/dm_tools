@@ -106,31 +106,64 @@ propriety_data = {
   18 => {name:'special_lance', description: 'special_lance_DESC'},
   19 => {name:'special_net', description: 'special_net_DESC'},
   20 => {name:'throw', description: 'throw_DESC'},
-  21 => {name:'versatile_1d8', description: 'versatile_1d8_DESC'},
-  22 => {name:'versatile_1d10', description: 'versatile_1d10_DESC'},
-  23 => {name:'no_dex_bonus', description: 'no_dex_bonus_DESC'}
+  21 => {name:'two_handed', description: 'two_handed_DESC'},
+  22 => {name:'versatile_1d8', description: 'versatile_1d8_DESC'},
+  23 => {name:'versatile_1d10', description: 'versatile_1d10_DESC'},
+  24 => {name:'no_dex_bonus', description: 'no_dex_bonus_DESC'}
 }
 
 armor_proprieties_data = {
-  1 => {armor_id:  Weapon.find_by(name: 'padded'), propriety_id: Propriety.find_by(name: 'dis:_sneak')},
-  2 => {armor_id:  Weapon.find_by(name: 'hide'), propriety_id: Propriety.find_by(name: 'max_dex_bonus:_2')},
-  3 => {armor_id:  Weapon.find_by(name: 'chain_shirt'), propriety_id: Propriety.find_by(name: 'max_dex_bonus:_2')},
-  4 => {armor_id:  Weapon.find_by(name: 'scale_mail'), propriety_id: Propriety.find_by(name: 'dis:_sneak')},
-  5 => {armor_id:  Weapon.find_by(name: 'scale_mail'), propriety_id: Propriety.find_by(name: 'max_dex_bonus:_2')},
-  6 => {armor_id:  Weapon.find_by(name: 'breastplate'), propriety_id: Propriety.find_by(name: 'max_dex_bonus:_2')},
-  7 => {armor_id:  Weapon.find_by(name: 'half_plate'), propriety_id: Propriety.find_by(name: 'dis:_sneak')},
-  8 => {armor_id:  Weapon.find_by(name: 'half_plate'), propriety_id: Propriety.find_by(name: 'max_dex_bonus:_2')},
-  9 => {armor_id:  Weapon.find_by(name: 'ring_mail'), propriety_id: Propriety.find_by(name: 'dis:_sneak')},
-  10 => {armor_id:  Weapon.find_by(name: 'ring_mail'), propriety_id: Propriety.find_by(name: 'no_dex_bonus')},
-  11 => {armor_id:  Weapon.find_by(name: 'chain_mail'), propriety_id: Propriety.find_by(name: 'dis:_sneak')},
-  12 => {armor_id:  Weapon.find_by(name: 'chain_mail'), propriety_id: Propriety.find_by(name: 'no_dex_bonus')},
-  13 => {armor_id:  Weapon.find_by(name: 'chain_mail'), propriety_id: Propriety.find_by(name: 'min_str:_13')},
-  14 => {armor_id:  Weapon.find_by(name: 'splint'), propriety_id: Propriety.find_by(name: 'dis:_sneak')},
-  15 => {armor_id:  Weapon.find_by(name: 'splint'), propriety_id: Propriety.find_by(name: 'no_dex_bonus')},
-  16 => {armor_id:  Weapon.find_by(name: 'splint'), propriety_id: Propriety.find_by(name: 'min_str:_15')},
-  17 => {armor_id:  Weapon.find_by(name: 'plate'), propriety_id: Propriety.find_by(name: 'dis:_sneak')},
-  18 => {armor_id:  Weapon.find_by(name: 'plate'), propriety_id: Propriety.find_by(name: 'no_dex_bonus')},
-  19 => {armor_id:  Weapon.find_by(name: 'plate'), propriety_id: Propriety.find_by(name: 'min_str:_15')}
+  1 => {armor:  Armor.find_by(name: 'padded'), propriety: Propriety.find_by(name: 'dis:_sneak')},
+  2 => {armor:  Armor.find_by(name: 'hide'), propriety: Propriety.find_by(name: 'max_dex_bonus:_2')},
+  3 => {armor:  Armor.find_by(name: 'chain_shirt'), propriety: Propriety.find_by(name: 'max_dex_bonus:_2')},
+  4 => {armor:  Armor.find_by(name: 'scale_mail'), propriety: Propriety.find_by(name: 'dis:_sneak')},
+  5 => {armor:  Armor.find_by(name: 'scale_mail'), propriety: Propriety.find_by(name: 'max_dex_bonus:_2')},
+  6 => {armor:  Armor.find_by(name: 'breastplate'), propriety: Propriety.find_by(name: 'max_dex_bonus:_2')},
+  7 => {armor:  Armor.find_by(name: 'half_plate'), propriety: Propriety.find_by(name: 'dis:_sneak')},
+  8 => {armor:  Armor.find_by(name: 'half_plate'), propriety: Propriety.find_by(name: 'max_dex_bonus:_2')},
+  9 => {armor:  Armor.find_by(name: 'ring_mail'), propriety: Propriety.find_by(name: 'dis:_sneak')},
+  10 => {armor:  Armor.find_by(name: 'ring_mail'), propriety: Propriety.find_by(name: 'no_dex_bonus')},
+  11 => {armor:  Armor.find_by(name: 'chain_mail'), propriety: Propriety.find_by(name: 'dis:_sneak')},
+  12 => {armor:  Armor.find_by(name: 'chain_mail'), propriety: Propriety.find_by(name: 'no_dex_bonus')},
+  13 => {armor:  Armor.find_by(name: 'chain_mail'), propriety: Propriety.find_by(name: 'min_str:_13')},
+  14 => {armor:  Armor.find_by(name: 'splint'), propriety: Propriety.find_by(name: 'dis:_sneak')},
+  15 => {armor:  Armor.find_by(name: 'splint'), propriety: Propriety.find_by(name: 'no_dex_bonus')},
+  16 => {armor:  Armor.find_by(name: 'splint'), propriety: Propriety.find_by(name: 'min_str:_15')},
+  17 => {armor:  Armor.find_by(name: 'plate'), propriety: Propriety.find_by(name: 'dis:_sneak')},
+  18 => {armor:  Armor.find_by(name: 'plate'), propriety: Propriety.find_by(name: 'no_dex_bonus')},
+  19 => {armor:  Armor.find_by(name: 'plate'), propriety: Propriety.find_by(name: 'min_str:_15')}
+}
+
+weapon_proprieties_data = {
+  1 => {weapon: Weapon.find_by(name: 'shortsword'), propriety: Propriety.find_by(name: 'finesse') },
+  2 => {weapon: Weapon.find_by(name: 'shortsword'), propriety: Propriety.find_by(name: 'light') },
+  3 => {weapon: Weapon.find_by(name: 'dart'), propriety: Propriety.find_by(name: 'finesse') },
+  4 => {weapon: Weapon.find_by(name: 'dart'), propriety: Propriety.find_by(name: 'range_80_320') },
+  5 => {weapon: Weapon.find_by(name: 'longbow'), propriety: Propriety.find_by(name: 'ammunition') },
+  6 => {weapon: Weapon.find_by(name: 'longbow'), propriety: Propriety.find_by(name: 'range_150_600') },
+  7 => {weapon: Weapon.find_by(name: 'longbow'), propriety: Propriety.find_by(name: 'heavy') },
+  8 => {weapon: Weapon.find_by(name: 'longbow'), propriety: Propriety.find_by(name: 'two_handed') },
+  9 => {weapon: Weapon.find_by(name: 'handaxe'), propriety: Propriety.find_by(name: 'light') },
+  10 => {weapon: Weapon.find_by(name: 'handaxe'), propriety: Propriety.find_by(name: 'twrow') },
+  11 => {weapon: Weapon.find_by(name: 'handaxe'), propriety: Propriety.find_by(name: 'range_20_60') },
+  12 => {weapon: Weapon.find_by(name: 'javelin'), propriety: Propriety.find_by(name: 'throw') },
+  13 => {weapon: Weapon.find_by(name: 'javelin'), propriety: Propriety.find_by(name: 'range_30_120') },
+  14 => {weapon: Weapon.find_by(name: 'greatclub'), propriety: Propriety.find_by(name: 'two_handed') },
+  15 => {weapon: Weapon.find_by(name: 'longsword'), propriety: Propriety.find_by(name: 'versatile_1d10') },
+  16 => {weapon: Weapon.find_by(name: 'rapier'), propriety: Propriety.find_by(name: 'finesse') },
+  17 => {weapon: Weapon.find_by(name: 'shortbow'), propriety: Propriety.find_by(name: 'ammunition') },
+  18 => {weapon: Weapon.find_by(name: 'shortbow'), propriety: Propriety.find_by(name: 'range_80_320') },
+  19 => {weapon: Weapon.find_by(name: 'shortbow'), propriety: Propriety.find_by(name: 'two_handed') },
+  20 => {weapon: Weapon.find_by(name: 'dagger'), propriety: Propriety.find_by(name: 'finesse') },
+  21 => {weapon: Weapon.find_by(name: 'dagger'), propriety: Propriety.find_by(name: 'light') },
+  22 => {weapon: Weapon.find_by(name: 'dagger'), propriety: Propriety.find_by(name: 'throw') },
+  23 => {weapon: Weapon.find_by(name: 'dagger'), propriety: Propriety.find_by(name: 'range_20_60') },
+  24 => {weapon: Weapon.find_by(name: 'light_crossbow'), propriety: Propriety.find_by(name: 'ammunition') },
+  25 => {weapon: Weapon.find_by(name: 'light_crossbow'), propriety: Propriety.find_by(name: 'range_80_320') },
+  26 => {weapon: Weapon.find_by(name: 'light_crossbow'), propriety: Propriety.find_by(name: 'loading') },
+  27 => {weapon: Weapon.find_by(name: 'light_crossbow'), propriety: Propriety.find_by(name: 'two_handed') },
+  28 => {weapon: Weapon.find_by(name: 'quarterstaff'), propriety: Propriety.find_by(name: 'versatile_1d8') },
+  29 => {weapon: Weapon.find_by(name: 'battleaxe'), propriety: Propriety.find_by(name: 'versatile_1d10') }
 }
 
 #seeding process
@@ -139,3 +172,4 @@ seed_process('armor', armor_data)
 seed_process('weapon', weapon_data)
 seed_process('propriety', propriety_data)
 seed_process('armor_propriety', armor_proprieties_data)
+seed_process('weapon_propriety', weapon_proprieties_data)
