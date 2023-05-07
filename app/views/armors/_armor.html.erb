@@ -1,31 +1,31 @@
 <div id="<%= dom_id armor %>">
   <p>
-    <strong>Name:</strong>
-    <%= armor.name %>
+    <strong><%= t('name') %>:</strong>
+    <%= t(armor.name) %>
   </p>
 
   <p>
-    <strong>Kind:</strong>
-    <%= armor.kind %>
+    <strong><%= t('kind') %>:</strong>
+    <%= t(armor.kind) %>
   </p>
 
   <p>
-    <strong>Ac:</strong>
+    <strong><%= t('ac') %>:</strong>
     <%= armor.ac %>
   </p>
 
   <p>
-    <strong>Weight:</strong>
-    <%= armor.weight %>
+    <strong><%= t('weight') %>:</strong>
+    <%= armor.item_weight %>
   </p>
 
   <p>
-    <strong>Price:</strong>
-    <%= armor.price %>
+    <strong><%= t('price') %>:</strong>
+    <%= price_converter(armor.price) %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong><%= t('description') %>:</strong>
     <%= armor.description %>
   </p>
 

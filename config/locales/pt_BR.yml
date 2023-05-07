@@ -4,6 +4,7 @@ pt_BR:
   action: "Ação"
   actions: "Ações"
   add: "Adicionar"
+  and: 'e'
   armor: "Armadura"
   armors: "Armaduras"
   armor_class: "Classe de Armadura"
@@ -17,10 +18,12 @@ pt_BR:
   chain_shirt: "Cota de Malhas Parcial"
   challange_rating: "Nível de Desafio"
   con: "Con"
+  cp: "PC"
   creature_total: "Total de Criaturas"
   #d
   dagger: "Adaga"
   dart: "Dardo"
+  description: "Descrição"
   dex: "Des"
   #e
   encounter_calculator: "Calculador de Encontros"
@@ -31,6 +34,7 @@ pt_BR:
   #g
   gargantuan: "Colossal"
   giant_rat: "Rato Gigante"
+  gp: "PO"
   greatclub: "Clava Grande"
   #h
   half_plate: "Placas Parcial"
@@ -47,6 +51,7 @@ pt_BR:
   #j
   javelin: "Azagaia"
   #k
+  kind: "Tipo"
   #l
   large: "Grande"
   leather: "Couro"
@@ -69,6 +74,7 @@ pt_BR:
   #p
   padded: "Acolchoada"
   plate: "Placas"
+  price: "Preço"
   #q
   quarterstaff: "Bastão"
   #r
@@ -84,6 +90,7 @@ pt_BR:
   size: "Tamanho"
   small: 'Pequeno'
   speed: "Deslocamento"
+  sp: "PP"
   splint: "Cota de Talas"
   str: "For"
   studded_leather: "Couro Batido"
@@ -93,6 +100,7 @@ pt_BR:
   #u
   #v
   #w
+  weight: "Peso"
   weapon: "Arma"
   weapons: "Armas"
   wis: "Sab"
