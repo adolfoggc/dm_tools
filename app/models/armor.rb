@@ -10,6 +10,16 @@ class Armor < ApplicationRecord
     helmet: 4
   }
 
+  def total_ac
+    if proprieties.where(name: 'max_dex_bonus:_2').present?
+      ac + ' + ' + I18n.translate('dex').upcase + ('(Max: 2)')
+    elsif proprieties.where(name: 'no_dex_bonus').present?
+      ac
+    else
+      ac + ' + ' + I18n.translate('dex').upcase
+    end
+  end
+
   def item_weight
     if I18n.locale.to_s == 'en'
       weight.to_s + ' lb'.pluralize(weight)
