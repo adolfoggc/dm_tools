@@ -1,32 +1,64 @@
 <div id="<%= dom_id armor %>">
-  <p>
-    <strong><%= t('name') %>:</strong>
-    <%= t(armor.name) %>
-  </p>
 
-  <p>
-    <strong><%= t('kind') %>:</strong>
-    <%= t(armor.kind) %>
-  </p>
-
-  <p>
-    <strong><%= t('ac') %>:</strong>
-    <%= armor.ac %>
-  </p>
-
-  <p>
-    <strong><%= t('weight') %>:</strong>
-    <%= armor.item_weight %>
-  </p>
-
-  <p>
-    <strong><%= t('price') %>:</strong>
-    <%= price_converter(armor.price) %>
-  </p>
-
-  <p>
-    <strong><%= t('description') %>:</strong>
-    <%= armor.description %>
-  </p>
-
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">
+        <div class="row">
+          <div class="col">
+            <span class="badge badge-primary">
+              <b><%= t(armor.name) %></b>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <span class="small"><%= t(armor.kind) %></span>
+          </div>
+        </div>
+        </h5>
+      <p class="card-text">
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <strong><%= t('ac') %>: </strong>
+              <%= armor.total_ac %>
+            </div>
+            <div class="row">
+              <strong><%= t('price') %>:</strong>
+              <%= price_converter(armor.price) %>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <strong><%= t('weight') %>: </strong>
+              <%= armor.item_weight %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <%= t('description') + ":" %>
+            </div>
+            <div class="row">
+              <%= armor.description %>
+            </div>
+            <% if armor.proprieties.any? %>
+              <div class="row">
+                <%= t('propriety'.pluralize(armor.proprieties.count)) %>
+              </div>
+              <% armor.proprieties.order(:name).each do |p| %>
+                <div class="row">
+                  <b><%= t('proprieties_key.' + p.name) + ': ' %></b>
+                  <%= t('proprieties_key.' + p.description) %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
 </div>
