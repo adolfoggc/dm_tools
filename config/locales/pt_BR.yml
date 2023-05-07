@@ -75,6 +75,8 @@ pt_BR:
   padded: "Acolchoada"
   plate: "Placas"
   price: "Preço"
+  propriety: "Propriedade"
+  proprieties: "Propriedades"
   #q
   quarterstaff: "Bastão"
   #r
@@ -108,7 +110,7 @@ pt_BR:
   xp: "Exp"
   #y
   #z
-  proprieties:
+  proprieties_key:
     ammunition: "Munição"
     ammunition_DESC: "Só é possível utilizar esta arma se tiver munição compatível"
     dis:_sneak: "Desvantagem: Furtividade"
