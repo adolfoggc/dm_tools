@@ -347,7 +347,7 @@ module ApplicationHelper
     silver = price/10
     msg = silver.to_s + ' ' + t('sp') if silver > 0
     price %= 10
-    msg = msg + ' ' + t('and') + ' '  if (price > 0) && (platinum > 0 || gold > 0 || silver > 0)
+    msg = msg + ' ' + t('and') + ' '  if (price > 0) && (gold > 0 || silver > 0)
     msg = msg + price.to_s + ' ' + t('cp') if price > 0
     msg  
   end
