@@ -62,6 +62,7 @@ pt_BR:
   longsword: "Espada Longa"
   #m
   mace: "Maça"
+  martial: "Marcial"
   martial_melee_weapon: "Arma Marcial Corpo-a-Corpo"
   martial_ranged_weapon: "Arma Marcial à Distância"
   medium: "Médio"
@@ -88,6 +89,7 @@ pt_BR:
   shield: "Escudo"
   shortbow: "Arco Curto"
   shortsword: "Espada Curta"
+  simple: "Simples"
   simple_melee_weapon: "Arma Simples Corpo-a-Corpo"
   simple_ranged_weapon: "Arma Simples à Distância"
   size: "Tamanho"
