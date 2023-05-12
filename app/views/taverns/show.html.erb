@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tavern %>
+
+<div>
+  <%= link_to "Edit this tavern", edit_tavern_path(@tavern) %> |
+  <%= link_to "Back to taverns", taverns_path %>
+
+  <%= button_to "Destroy this tavern", @tavern, method: :delete %>
+</div>

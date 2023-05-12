@@ -1,0 +1,2 @@
+class Tavern < ApplicationRecord
+end

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Taverns</h1>
+
+<div id="taverns">
+  <% @taverns.each do |tavern| %>
+    <%= render tavern %>
+    <p>
+      <%= link_to "Show this tavern", tavern %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tavern", new_tavern_path %>
