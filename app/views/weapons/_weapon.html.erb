@@ -38,15 +38,13 @@
         <div class="row">
           <div class="col">
             <div class="row">
-              <%= t('description') + ":" %>
+              <b><%= t('description') + ":" %></b>
             </div>
             <div class="row">
               <%= weapon.description %>
             </div>
             <% if weapon.proprieties.any? %>
-              <div class="row">
-                <%= t('propriety'.pluralize(weapon.proprieties.count)) %>
-              </div>
+              <hr style="background-color: gray">
               <% weapon.proprieties.order(:name).each do |p| %>
                 <div class="row">
                   <b><%= t('proprieties_key.' + p.name) + ': ' %></b>
