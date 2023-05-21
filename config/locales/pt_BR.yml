@@ -1,164 +1,192 @@
 pt_BR:
   #a
-  ac: "CA"
-  action: "Ação"
-  actions: "Ações"
-  add: "Adicionar"
+  ac: 'CA'
+  action: 'Ação'
+  actions: 'Ações'
+  add: 'Adicionar'
   and: 'e'
-  armor: "Armadura"
-  armors: "Armaduras"
-  armor_class: "Classe de Armadura"
+  armor: 'Armadura'
+  armors: 'Armaduras'
+  armor_class: 'Classe de Armadura'
   #b
-  battleaxe: "Machado de Batalha"
-  breastplate: "Couraça Parcial"
+  battleaxe: 'Machado de Batalha'
+  breastplate: 'Couraça Parcial'
   #c
-  calculators: "Calculadoras"
-  cha: "Car"
-  chain_mail: "Cota de Malha"
-  chain_shirt: "Cota de Malhas Parcial"
-  challange_rating: "Nível de Desafio"
-  con: "Con"
-  cp: "PC"
-  creature_total: "Total de Criaturas"
+  calculators: 'Calculadoras'
+  cha: 'Car'
+  chain_mail: 'Cota de Malha'
+  chain_shirt: 'Cota de Malhas Parcial'
+  challange_rating: 'Nível de Desafio'
+  con: 'Con'
+  cp: 'PC'
+  creature_total: 'Total de Criaturas'
   #d
-  damage: "Dano"
-  dagger: "Adaga"
-  dart: "Dardo"
-  description: "Descrição"
-  dex: "Des"
+  damage: 'Dano'
+  dagger: 'Adaga'
+  dart: 'Dardo'
+  description: 'Descrição'
+  dex: 'Des'
+  drink: 'Bebida'
+  drink_menu:
+    #anão - É alemão em referência aos anões da cultura Viking
+    #dracônico - dinamarquês, referência à Beowulf
+    #thiefling - inglês, homenagem à música The Devil Went Down to Georgia e por Sthephen King e H. P. Lovecraft, por livros incíveis livros que amo
+    #halfling - italiano, pelo amor à comida e bebida 
+    #gnomo - zoeira
+    squalid_1: 'Cerveja Clara Local - 1 PC'
+    squalid_2: 'Cidra Local - 1 PC'
+    squalid_3: 'Vinho Tinto Seco Local - 2 PC'
+    squalid_4: 'Cerveja Escura Local - 2 PC'
+    poor_drink_1: 'Cuspe de Goblin (Cerveja Clara Humana) - 2 PC'
+    poor_drink_2: 'Sangria (Cerveja Escura Orc) - 2 PC'
+    poor_drink_3: 'Kissuk (Vinho Gnomo) - 3 PC'
+    poor_drink_4: 'Azidor (Cidra Halfling) - 4 PC'
+    poor_drink_5: 'Maginho (Licor Gnomo) - 3 PC'
+    poor_drink_6: 'Aventura  (Cerveja Escura Humana) - 3 PC'
+    modest_drink_1: 'Schiuma di Fiume - Espuma do Rio (Cerveja Clara Halfling)'
+    modest_drink_2: 'Golden Dream - Sonho Dourado (Cerveja Clara Thiefling)'
+    aristocratic_1: 'Drachentränen - Lágrimas de Dragão (Cerveja Escura Anã) - 7 PC'
+    aristocratic_2: 'Lúthien - Filha da Flor (Vinho Branco Suave Élfico) - 7 PC'
+    aristocratic_3: 'Hjerte I Flammer  - Coração em Chamas (Destilado de Cereais Dracônico) - '
+    aristocratic_4: 'Helligt Vand - Água Sagrada (Uísque de Cereais Sem Cheiro Dracônico) - '
+    aristocratic_5: 'Bloody Tears - Lágrimas Ensaguentadas (Vinho Tinto Suave Thiefling) - '
+  drinks: 'Bebidas'
   #e
-  encounter_calculator: "Calculador de Encontros"
-  encounter_xp: "Exp do Encontro"
-  equipments: "Equipamentos"
-  experience: "Experiência"
+  encounter_calculator: 'Calculador de Encontros'
+  encounter_xp: 'Exp do Encontro'
+  equipments: 'Equipamentos'
+  experience: 'Experiência'
   #f
   #g
-  gargantuan: "Colossal"
-  giant_rat: "Rato Gigante"
-  gp: "PO"
-  greatclub: "Clava Grande"
+  gargantuan: 'Colossal'
+  giant_rat: 'Rato Gigante'
+  gp: 'PO'
+  greatclub: 'Clava Grande'
   #h
-  half_plate: "Placas Parcial"
-  handaxe: "Machado de Mão"
-  heavy_armor: "Armadura Pesada"
-  helmet: "Elmo"
-  hello: "Olá mundo"
-  hide: "Gibão de Peles"
+  half_plate: 'Placas Parcial'
+  handaxe: 'Machado de Mão'
+  heavy_armor: 'Armadura Pesada'
+  helmet: 'Elmo'
+  hello: 'Olá mundo'
+  hide: 'Gibão de Peles'
   hp: 'PVs'
-  huge: "Enorme"
+  huge: 'Enorme'
   #i
-  int: "Int"
-  item_creator: "Criação de Item"
+  int: 'Int'
+  item_creator: 'Criação de Item'
   #j
-  javelin: "Azagaia"
+  javelin: 'Azagaia'
   #k
-  kind: "Tipo"
+  kind: 'Tipo'
   #l
-  large: "Grande"
-  leather: "Couro"
-  light_armor: "Armadura Leve"
-  light_crossbow: "Besta Leve"
-  longbow: "Arco Longo"
-  longsword: "Espada Longa"
+  large: 'Grande'
+  leather: 'Couro'
+  light_armor: 'Armadura Leve'
+  light_crossbow: 'Besta Leve'
+  longbow: 'Arco Longo'
+  longsword: 'Espada Longa'
   #m
-  mace: "Maça"
-  martial: "Marcial"
-  martial_melee_weapon: "Arma Marcial Corpo-a-Corpo"
-  martial_ranged_weapon: "Arma Marcial à Distância"
-  medium: "Médio"
-  medium_armor: "Armadura Média"
-  minute: "Minuto"
-  monsters: "Monstros"
+  mace: 'Maça'
+  martial: 'Marcial'
+  martial_melee_weapon: 'Arma Marcial Corpo-a-Corpo'
+  martial_ranged_weapon: 'Arma Marcial à Distância'
+  medium: 'Médio'
+  medium_armor: 'Armadura Média'
+  minute: 'Minuto'
+  monsters: 'Monstros'
   #n
-  name: "Nome"
+  name: 'Nome'
   #o
-  other: "Outro(a)"
+  other: 'Outro(a)'
   #p
-  padded: "Acolchoada"
-  plate: "Placas"
-  price: "Preço"
-  propriety: "Propriedade"
-  proprieties: "Propriedades"
+  padded: 'Acolchoada'
+  plate: 'Placas'
+  price: 'Preço'
+  propriety: 'Propriedade'
+  proprieties: 'Propriedades'
+  proprieties_key:
+    ammunition: 'Munição'
+    ammunition_DESC: 'Só é possível utilizar esta arma se tiver munição compatível'
+    dis:_sneak: 'Desvantagem: Furtividade'
+    dis:_sneak_DESC: 'Testes de Furtividade devem ser rolados em desvantagem'
+    finesse: 'Acuidade'
+    finesse_DESC:  'Pode-se utilizar o modificador de Destreza ou Força para rolagen de acerto e dano. O mesmo modificador deve ser usado em ambas rolagens'
+    heavy: 'Pesado'
+    heavy_DESC: 'Criaturas Pequenas rolam com desvantagem os ataques'
+    light: 'Leve'
+    light_DESC: 'A arma é ideal para combate com duas armas'
+    loading: 'Recarga'
+    loading_DESC: 'A arma pode ser utilizada apenas uma vez no turno, idependente da quantidade de ataques que podem ser usados'
+    max_dex_bonus:_2: 'Bônus Máximo de Destreza: +2'
+    max_dex_bonus:_2_DESC: 'O bônus máximo de destreza para CA deste item é +2'
+    min_str:_13: 'Força Mínima: 13'
+    min_str:_13_DESC: 'Personagem deve ter pelo menos força 13 para usar esse objeto ou seu deslocamento cairá em 3 metros'
+    min_str:_15: 'Força Mínima: 15'
+    min_str:_15_DESC: 'Personagem deve ter pelo menos força 15 para usar esse objeto ou seu deslocamento cairá em 3 metros'
+    range_5_15: 'Alcance (1,5/4,5)'
+    range_5_15_DESC: 'Ataques até 1,5m são rolados normalmente. Ataques até o alcance máximo (4,5m) são com desvantagem'
+    range_20_60: 'Alcance (6/18)'
+    range_20_60_DESC: 'Ataques até 6m são rolados normalmente. Ataques até o alcance máximo (18m) são com desvantagem'
+    range_25_100: 'Alcance (7,5/30)'
+    range25_100_DESC: 'Ataques até 7,5m são rolados normalmente. Ataques até o alcance máximo (30m) são com desvantagem'
+    range_30_120: 'Alcance (9/36)'
+    range_30_120_DESC: 'Ataques até 9m são rolados normalmente. Ataques até o alcance máximo (36m) são com desvantagem'
+    range_80_320: 'Alcance (24/96)'
+    range_80_320_DESC: 'Ataques até 24m são rolados normalmente. Ataques até o alcance máximo (96m) são com desvantagem'
+    range_100_400: 'Alcance (30/120)'
+    range_100_400_DESC: 'Ataques até 30m são rolados normalmente. Ataques até o alcance máximo (120m) são com desvantagem'
+    range_150_600: 'Alcance (45/180)'
+    range_150_600_DESC: 'Ataques até 45m são rolados normalmente. Ataques até o alcance máximo (180m) são com desvantagem'
+    reach: 'Alcance'
+    reach_DESC: 'A arma permite atacar ou fazer ataques de oportunidade à 3m de distância'
+    special_lance: 'Especial: Lança'
+    special_lance_DESC: 'Sofre desvantagem ao enfrentar inimigos à 1,5m. Requer 2 mãos em combate não montado'
+    special_net: 'Especial: Rede'
+    special_net_DESC: 'Uma criatura de tamanho Grande ou menos que isso fica restringida até ser libertada. Criaturas de tamanhos maiores não são afetadas. Um teste de FOR (CD: 10) ou a rede receber 5 de dano (CA: 10) pode libertar quem estiver preso nela e essa ação pode ser feita por alguém enredado ou que deseje libertar essa pessoa'
+    throw: 'Arremesso'
+    throw_DESC: 'A arma de corpo-à-corpo pode ser arremessada e os testes devem ser realizados com o mesmo modificador de um ataque corpo-à-corpo'
+    two_handed: 'Duas Mãos'
+    two_handed_DESC: 'A arma deve ser utilizada com duas mãos'
+    versatile_1d8: 'Versátil (1d8)'
+    versatile_1d8_DESC: 'A arma deve pode ser utilizada com duas mãos, causando 1d8 por ataque'
+    versatile_1d10: 'Versátil (1d10)'
+    versatile_1d10_DESC: 'A arma deve pode ser utilizada com duas mãos, causando 1d10 por ataque'
+    no_dex_bonus: 'CA sem Bônus de Destreza'
+    no_dex_bonus_DESC: 'A armadura não permite o uso do bônus de Destreza em seu cálculo para CA'
   #q
-  quarterstaff: "Bastão"
+  quarterstaff: 'Bastão'
   #r
-  rapier: "Rapieira"
-  ring_mail: "Cota de Anéis"
+  rapier: 'Rapieira'
+  ring_mail: 'Cota de Anéis'
   #s
-  scale_mail: "Lórica de Escamas"
-  shield: "Escudo"
-  shortbow: "Arco Curto"
-  shortsword: "Espada Curta"
-  simple: "Simples"
-  simple_melee_weapon: "Arma Simples Corpo-a-Corpo"
-  simple_ranged_weapon: "Arma Simples à Distância"
-  size: "Tamanho"
+  scale_mail: 'Lórica de Escamas'
+  shield: 'Escudo'
+  shortbow: 'Arco Curto'
+  shortsword: 'Espada Curta'
+  simple: 'Simples'
+  simple_melee_weapon: 'Arma Simples Corpo-a-Corpo'
+  simple_ranged_weapon: 'Arma Simples à Distância'
+  size: 'Tamanho'
   small: 'Pequeno'
-  speed: "Deslocamento"
-  sp: "PP"
-  splint: "Cota de Talas"
-  str: "For"
-  studded_leather: "Couro Batido"
+  speed: 'Deslocamento'
+  sp: 'PP'
+  splint: 'Cota de Talas'
+  str: 'For'
+  studded_leather: 'Couro Batido'
   #t
+  tavern: 'Taverna'
   tiny: 'Miúdo'
-  tools: "Ferramentas"
+  tools: 'Ferramentas'
   #u
   #v
   #w
-  weight: "Peso"
-  weapon: "Arma"
-  weapons: "Armas"
-  wis: "Sab"
+  weight: 'Peso'
+  weapon: 'Arma'
+  weapons: 'Armas'
+  wis: 'Sab'
   #x
-  xp: "Exp"
+  xp: 'Exp'
   #y
   #z
-  proprieties_key:
-    ammunition: "Munição"
-    ammunition_DESC: "Só é possível utilizar esta arma se tiver munição compatível"
-    dis:_sneak: "Desvantagem: Furtividade"
-    dis:_sneak_DESC: "Testes de Furtividade devem ser rolados em desvantagem"
-    finesse: "Acuidade"
-    finesse_DESC:  "Pode-se utilizar o modificador de Destreza ou Força para rolagen de acerto e dano. O mesmo modificador deve ser usado em ambas rolagens"
-    heavy: "Pesado"
-    heavy_DESC: "Criaturas Pequenas rolam com desvantagem os ataques"
-    light: "Leve"
-    light_DESC: "A arma é ideal para combate com duas armas"
-    loading: "Recarga"
-    loading_DESC: "A arma pode ser utilizada apenas uma vez no turno, idependente da quantidade de ataques que podem ser usados"
-    max_dex_bonus:_2: "Bônus Máximo de Destreza: +2"
-    max_dex_bonus:_2_DESC: "O bônus máximo de destreza para CA deste item é +2"
-    min_str:_13: "Força Mínima: 13"
-    min_str:_13_DESC: "Personagem deve ter pelo menos força 13 para usar esse objeto ou seu deslocamento cairá em 3 metros"
-    min_str:_15: "Força Mínima: 15"
-    min_str:_15_DESC: "Personagem deve ter pelo menos força 15 para usar esse objeto ou seu deslocamento cairá em 3 metros"
-    range_5_15: "Alcance (1,5/4,5)"
-    range_5_15_DESC: "Ataques até 1,5m são rolados normalmente. Ataques até o alcance máximo (4,5m) são com desvantagem"
-    range_20_60: "Alcance (6/18)"
-    range_20_60_DESC: "Ataques até 6m são rolados normalmente. Ataques até o alcance máximo (18m) são com desvantagem"
-    range_25_100: "Alcance (7,5/30)"
-    range25_100_DESC: "Ataques até 7,5m são rolados normalmente. Ataques até o alcance máximo (30m) são com desvantagem"
-    range_30_120: "Alcance (9/36)"
-    range_30_120_DESC: "Ataques até 9m são rolados normalmente. Ataques até o alcance máximo (36m) são com desvantagem"
-    range_80_320: "Alcance (24/96)"
-    range_80_320_DESC: "Ataques até 24m são rolados normalmente. Ataques até o alcance máximo (96m) são com desvantagem"
-    range_100_400: "Alcance (30/120)"
-    range_100_400_DESC: "Ataques até 30m são rolados normalmente. Ataques até o alcance máximo (120m) são com desvantagem"
-    range_150_600: "Alcance (45/180)"
-    range_150_600_DESC: "Ataques até 45m são rolados normalmente. Ataques até o alcance máximo (180m) são com desvantagem"
-    reach: "Alcance"
-    reach_DESC: "A arma permite atacar ou fazer ataques de oportunidade à 3m de distância"
-    special_lance: "Especial: Lança"
-    special_lance_DESC: "Sofre desvantagem ao enfrentar inimigos à 1,5m. Requer 2 mãos em combate não montado"
-    special_net: "Especial: Rede"
-    special_net_DESC: "Uma criatura de tamanho Grande ou menos que isso fica restringida até ser libertada. Criaturas de tamanhos maiores não são afetadas. Um teste de FOR (CD: 10) ou a rede receber 5 de dano (CA: 10) pode libertar quem estiver preso nela e essa ação pode ser feita por alguém enredado ou que deseje libertar essa pessoa"
-    throw: "Arremesso"
-    throw_DESC: "A arma de corpo-à-corpo pode ser arremessada e os testes devem ser realizados com o mesmo modificador de um ataque corpo-à-corpo"
-    two_handed: "Duas Mãos"
-    two_handed_DESC: "A arma deve ser utilizada com duas mãos"
-    versatile_1d8: "Versátil (1d8)"
-    versatile_1d8_DESC: "A arma deve pode ser utilizada com duas mãos, causando 1d8 por ataque"
-    versatile_1d10: "Versátil (1d10)"
-    versatile_1d10_DESC: "A arma deve pode ser utilizada com duas mãos, causando 1d10 por ataque"
-    no_dex_bonus: "CA sem Bônus de Destreza"
-    no_dex_bonus_DESC: "A armadura não permite o uso do bônus de Destreza em seu cálculo para CA"
+
+  
