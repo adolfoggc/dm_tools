@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
   # Defines the root path route ("/")
@@ -16,7 +17,6 @@ Rails.application.routes.draw do
     resources :proprieties
     resources :settlements
     resources :taverns
-    devise_for :users
     
     get '/', to: 'dashboard#home', as: 'auth_home'
 
