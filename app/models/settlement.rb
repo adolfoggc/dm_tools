@@ -14,7 +14,9 @@ class Settlement < ApplicationRecord
 
   def generate_description
     return unless self.size_changed?
-    self.description = I18n.translate('population') + ': ' + generate_population_size 
+    pop_size = generate_population_size
+    self.description = I18n.translate('population') + ': ' + pop_size.to_s + "\n"
+    self.description += I18n.translate('guards') + ': ' +  (pop_size/10).to_s
   end
 
   def generate_population_size
@@ -35,5 +37,6 @@ class Settlement < ApplicationRecord
       die(12001, 25000)
     when 'metropolis'
       die(25001, 50000)
+    end
   end
 end
