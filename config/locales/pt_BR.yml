@@ -64,6 +64,7 @@ pt_BR:
   greatclub: 'Clava Grande'
   #h
   half_plate: 'Placas Parcial'
+  hamlet: 'Povoado'
   handaxe: 'Machado de Mão'
   heavy_armor: 'Armadura Pesada'
   helmet: 'Elmo'
@@ -80,6 +81,8 @@ pt_BR:
   kind: 'Tipo'
   #l
   large: 'Grande'
+  large_city: 'Cidade Grande'
+  large_town: 'Vila Grande'
   leather: 'Couro'
   light_armor: 'Armadura Leve'
   light_crossbow: 'Besta Leve'
@@ -92,6 +95,7 @@ pt_BR:
   martial_ranged_weapon: 'Arma Marcial à Distância'
   medium: 'Médio'
   medium_armor: 'Armadura Média'
+  metropolis: 'Metrópole'
   minute: 'Minuto'
   monsters: 'Monstros'
   #n
@@ -101,6 +105,7 @@ pt_BR:
   #p
   padded: 'Acolchoada'
   plate: 'Placas'
+  population: 'População'
   price: 'Preço'
   propriety: 'Propriedade'
   proprieties: 'Propriedades'
@@ -168,6 +173,8 @@ pt_BR:
   simple_ranged_weapon: 'Arma Simples à Distância'
   size: 'Tamanho'
   small: 'Pequeno'
+  small_city: 'Cidade Pequena'
+  small_town: 'Vila Pequena'
   speed: 'Deslocamento'
   sp: 'PP'
   splint: 'Cota de Talas'
@@ -175,10 +182,12 @@ pt_BR:
   studded_leather: 'Couro Batido'
   #t
   tavern: 'Taverna'
+  thorp: 'Vilarejo'
   tiny: 'Miúdo'
   tools: 'Ferramentas'
   #u
   #v
+  village: 'Aldeia'
   #w
   weight: 'Peso'
   weapon: 'Arma'
