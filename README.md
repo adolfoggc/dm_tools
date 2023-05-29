@@ -42,7 +42,8 @@ Active!
 
 
 ## Next Steps
-- City generator
+- Settlement generator [Working on it!]
+- Add some Settlement traits
 - More drinks and some foods for a Tavern
 - Add some codes to Code Pen for easy use online
 
