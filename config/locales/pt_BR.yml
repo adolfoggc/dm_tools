@@ -28,7 +28,7 @@ pt_BR:
   dex: 'Des'
   drink: 'Bebida'
   drink_menu:
-    #anão - É alemão em referência aos anões da cultura Viking
+    #anão - É alemão em referência às runas das línguas germânicas e por soar complexo
     #dracônico - dinamarquês, referência à Beowulf
     #thiefling - inglês, homenagem à música The Devil Went Down to Georgia e por Sthephen King e H. P. Lovecraft, por livros incíveis livros que amo
     #halfling - italiano, pelo amor à comida e bebida 
@@ -91,6 +91,7 @@ pt_BR:
   longsword: 'Espada Longa'
   #m
   mace: 'Maça'
+  magical: 'Mágico'
   martial: 'Marcial'
   martial_melee_weapon: 'Arma Marcial Corpo-a-Corpo'
   martial_ranged_weapon: 'Arma Marcial à Distância'
@@ -99,10 +100,12 @@ pt_BR:
   metropolis: 'Metrópole'
   minute: 'Minuto'
   monsters: 'Monstros'
+  monstrous: 'Monstruoso'
   #n
   name: 'Nome'
   #o
   other: 'Outro(a)'
+  ordinary: 'Comum'
   #p
   padded: 'Acolchoada'
   plate: 'Placas'
@@ -164,6 +167,8 @@ pt_BR:
   #r
   rapier: 'Rapieira'
   ring_mail: 'Cota de Anéis'
+  ruler: 'Poder Central'
+  rulers: 'Poderes Centrais'
   #s
   scale_mail: 'Lórica de Escamas'
   shield: 'Escudo'
@@ -187,6 +192,7 @@ pt_BR:
   tiny: 'Miúdo'
   tools: 'Ferramentas'
   #u
+  uncommon: 'Incomum'
   #v
   village: 'Aldeia'
   #w
