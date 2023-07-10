@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @clock %>
+
+<div>
+  <%= link_to "Edit this clock", edit_clock_path(@clock) %> |
+  <%= link_to "Back to clocks", clocks_path %>
+
+  <%= button_to "Destroy this clock", @clock, method: :delete %>
+</div>
