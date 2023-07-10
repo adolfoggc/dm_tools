@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_10_020857) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_10_030357) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,6 +39,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_10_020857) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "clocks", force: :cascade do |t|
+    t.string "name"
+    t.integer "size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "campaign_id", null: false
+    t.index ["campaign_id"], name: "index_clocks_on_campaign_id"
+  end
+
+  create_table "counters", force: :cascade do |t|
+    t.bigint "clock_id", null: false
+    t.integer "size"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["clock_id"], name: "index_counters_on_clock_id"
   end
 
   create_table "monsters", force: :cascade do |t|
@@ -115,6 +133,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_10_020857) do
 
   add_foreign_key "armor_proprieties", "armors"
   add_foreign_key "armor_proprieties", "proprieties"
+  add_foreign_key "clocks", "campaigns"
+  add_foreign_key "counters", "clocks"
   add_foreign_key "weapon_proprieties", "proprieties"
   add_foreign_key "weapon_proprieties", "weapons"
 end

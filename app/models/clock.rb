@@ -1,3 +1,4 @@
 class Clock < ApplicationRecord
-has_many :counters
+  belongs_to :campaigns
+  has_many :counters
 end
