@@ -1,0 +1,32 @@
+<%= form_with(model: counter) do |form| %>
+  <% if counter.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(counter.errors.count, "error") %> prohibited this counter from being saved:</h2>
+
+      <ul>
+        <% counter.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :clock_id, style: "display: block" %>
+    <%= form.text_field :clock_id %>
+  </div>
+
+  <div>
+    <%= form.label :size, style: "display: block" %>
+    <%= form.number_field :size %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
