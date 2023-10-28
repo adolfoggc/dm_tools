@@ -100,18 +100,16 @@ module ApplicationHelper
     html +=            '</tr>'
     html +=          '</thead>'
     html +=          '<tfoot>'
-    html +=            '<tr>'
-    headers.each do |h|
-      html +=            '<th>' + h + '</th>'
-    end
-    html +=            '</tr>'
-    html +=          '</tfoot>'
     html +=          '<tbody>'
     raw_data.each do |line|
       html +=          '<tr>'
+      if line.is_a? String
+        html +=         '<td>' + line.titleize + '</td>'
+      else
         line.each do |l|
-          html +=         '<td>' + l +'</td>'
+          html +=         '<td>' + l.titleize + '</td>'
         end
+      end
       html +=          '</tr>'
     end
     html +=          '</tbody>'
