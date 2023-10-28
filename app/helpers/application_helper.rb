@@ -133,7 +133,7 @@ module ApplicationHelper
   def collapse_elements(name, icon, submenu_section, submenu_names, submenu_paths)
     current_collapse = collapse_count
     html =  '<li class="nav-item '+ check_current_path(submenu_paths.flatten) + '">'
-    html +=   '<a class="nav-link ' +  + ' collapsed" href="#" data-toggle="collapse" data-target="#collapse_' + current_collapse + '"'
+    html +=   '<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse_' + current_collapse + '"'
     html +=     'aria-expanded="true" aria-controls="#collapse_' + current_collapse + '">'
     html +=     '<i class="fas fa-fw ' + icon + '"></i>'
     html +=     '&nbsp<span>' + name + '</span>'
