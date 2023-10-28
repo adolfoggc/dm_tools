@@ -21,7 +21,7 @@ module ApplicationHelper
     html =  '<select id=' + id + ' name=' + id + ' class="custom-select custom-select-sm form-control form-control-sm">'
     html +=   '<option hidden selected>' + options[:blank] + '<opton>' if options[:blank].present?
     data.each do |k, v|
-      html += '<option value=' + v + '>' + k + '</option>'
+      html += '<option value=' + v.to_s + '>' + k.titleize + '</option>'
     end
     html += '</select>'
 
