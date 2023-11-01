@@ -124,6 +124,53 @@ module ApplicationHelper
     html +=  '</div>'
     html.html_safe
   end
+
+  def model_table(table_name, headers, raw_data, options={translations: {}})
+    html =  '<div class="card shadow mb-4">'
+    html +=    '<div class="card-header py-3">'
+    html +=      '<h6 class="m-0 font-weight-bold text-primary">' + table_name + '</h6>'
+    html +=    '</div>'
+    html +=    '<div class="card-body">'
+    html +=      '<div class="table-responsive">'
+    html +=        '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">'
+    html +=          '<thead>'
+    html +=            '<tr>'
+    headers.values.each do |h|
+      html +=            '<th>' + h + '</th>'
+    end
+    if options[:translations].size == 2
+      options[:translations].each do |t|
+        html +=              '<th>t</th>'
+      end
+    else
+      html +=              '<th>Show</th>'
+      html +=              '<th>Edit</th>'
+    end
+    html +=            '</tr>'
+    html +=          '</thead>'
+    html +=          '<tfoot>'
+    html +=          '<tbody>'
+    raw_data.each do |line|
+      html +=          '<tr>'
+      headers.keys.each do |k|
+        html +=        '<td>' + line[k].to_s.titleize + '</td>'
+      end
+      if options[:translations]&.size == 2
+        html +=            '<td>' + easy_link(options[:translations][0], 'primary', edit_category_path(line[:id])) + '</td>'
+        html +=            '<td>' + easy_link(options[:translations][1], 'info', edit_category_path(line[:id])) + '</td>'
+      else
+        html +=            '<td>' + easy_link('Show', 'primary', edit_category_path(line[:id])) + '</td>'
+        html +=            '<td>' + easy_link('Edit', 'info', edit_category_path(line[:id])) + '</td>'
+      end
+      html +=          '</tr>'
+    end
+    html +=          '</tbody>'
+    html +=        '</table>'
+    html +=      '</div>'
+    html +=    '</div>'
+    html +=  '</div>'
+    html.html_safe
+  end
     
   #menu helpers
   def sidebar_element(name, icon, path)
