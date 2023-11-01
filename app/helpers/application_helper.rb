@@ -1,9 +1,14 @@
 module ApplicationHelper
+  def button_class(style)
+    html = "d-none d-sm-inline-block btn btn-sm btn-" + style + " shadow-sm"
+    html.html_safe
+  end
+
   #buttons and links
   def easy_link(text, style, path, options={event_type: '', event_method: '', icon: ''})
     html = '<a ' 
     html += options[:event_type] + '="' + options[:event_method] + '"' if options[:event_type].present?
-    html += ' href="' + path + '" class="d-none d-sm-inline-block btn btn-sm btn-'+ style + ' shadow-sm">'
+    html += ' href="' + path + '" class="' + button_class(style) + '">'
     html += '<i class="' + options[:icon] + ' fa-sm text-white-50"></i>' if options[:icon].present? 
     html += text
     html += '</a>'
@@ -11,7 +16,7 @@ module ApplicationHelper
   end
 
   def easy_button(text, style, options={event_type: '', event_method: '', icon: ''})
-    html = '<button class="d-none d-sm-inline-block btn btn-sm btn-' + style + ' shadow-sm"'
+    html = '<button class="' + button_class(style) + '"'
     html += ' ' + options[:event_type] + '="' + options[:event_method] +'"' if options[:event_type].present?
     html += '>' + text +'</button>'
     html.html_safe
