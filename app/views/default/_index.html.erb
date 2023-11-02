@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= @page_name %></h1>
+
+<div id="categories">
+  <% if @options.blank?%>
+    <%= model_table(@page_name, @headers, @models) %>
+  <% else %>
+    <%= model_table(@page_name, @headers, @models, @options) %>
+  <% end %>
+</div>
+
+<%= easy_link(@add_new_text, 'success', send('new_' + @singular_name + '_path')) %>
