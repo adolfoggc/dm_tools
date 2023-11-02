@@ -159,8 +159,10 @@ module ApplicationHelper
         html +=            '<td>' + easy_link(options[:translations][0], 'primary', edit_category_path(line[:id])) + '</td>'
         html +=            '<td>' + easy_link(options[:translations][1], 'info', edit_category_path(line[:id])) + '</td>'
       else
-        html +=            '<td>' + easy_link('Show', 'primary', edit_category_path(line[:id])) + '</td>'
-        html +=            '<td>' + easy_link('Edit', 'info', edit_category_path(line[:id])) + '</td>'
+        show_path = line.model_name.singular + '_path'
+        edit_path = 'edit_' + line.model_name.singular + '_path'
+        html +=            '<td>' + easy_link('Show', 'primary', send(show_path, line[:id])) + '</td>'
+        html +=            '<td>' + easy_link('Edit', 'info', send(edit_path, line[:id])) + '</td>'
       end
       html +=          '</tr>'
     end
