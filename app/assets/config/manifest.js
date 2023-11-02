@@ -12,3 +12,4 @@
 //= link vendor/bootstrap.bundle.min.js
 //= link vendor/jquery.min.js
 //= link font_awesome/all.min.css
+//= link base.css
