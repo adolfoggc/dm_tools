@@ -138,9 +138,9 @@ module ApplicationHelper
     headers.values.each do |h|
       html +=            '<th>' + h + '</th>'
     end
-    if options[:translations].size == 2
+    if options[:translations]&.size == 2
       options[:translations].each do |t|
-        html +=              '<th>t</th>'
+        html +=              '<th>' + t + '</th>'
       end
     else
       html +=              '<th>Show</th>'
