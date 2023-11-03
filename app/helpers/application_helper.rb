@@ -155,15 +155,17 @@ module ApplicationHelper
       headers.keys.each do |k|
         html +=        '<td>' + line[k].to_s.titleize + '</td>'
       end
+      show_path = line.model_name.singular + '_path'
+      edit_path = 'edit_' + line.model_name.singular + '_path'
       if options[:translations]&.size == 2
-        html +=            '<td>' + easy_link(options[:translations][0], 'primary', edit_category_path(line[:id])) + '</td>'
-        html +=            '<td>' + easy_link(options[:translations][1], 'info', edit_category_path(line[:id])) + '</td>'
+        show_text = options[:translations][0]
+        edit_text = options[:translations][1]
       else
-        show_path = line.model_name.singular + '_path'
-        edit_path = 'edit_' + line.model_name.singular + '_path'
-        html +=            '<td>' + easy_link('Show', 'primary', send(show_path, line[:id])) + '</td>'
-        html +=            '<td>' + easy_link('Edit', 'info', send(edit_path, line[:id])) + '</td>'
+        show_text = 'Show'
+        edit_text = 'Edit'
       end
+      html +=            '<td>' + easy_link(show_text, 'primary', send(show_path, line[:id])) + '</td>'
+      html +=            '<td>' + easy_link(edit_text, 'info', send(edit_path, line[:id])) + '</td>'
       html +=          '</tr>'
     end
     html +=          '</tbody>'
