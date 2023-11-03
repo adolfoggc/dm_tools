@@ -1,0 +1,13 @@
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary"><%= @page_name %></h6>
+  </div>
+  <div class="card-body">
+    <%= render "/layouts/default/form", object: @object %>
+  </div>
+</div>
+<br>
+
+<div>
+  <%= easy_link(@back_text, 'secondary', send(@plural_name + '_path')) %>
+</div>

@@ -1,0 +1,27 @@
+<%= form_with(model: object) do |form| %>
+  <% if object.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(object.errors.count, "error") %> prohibited this <%= @singular_name %> from being saved:</h2>
+
+      <ul>
+        <% object.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% @form_constructor.each do |k,v| %>
+    <% if v[0] == 'string' %>
+      <div>
+        <b><%= form.label k, v[1], style: "display: block" %></b>
+        <%= form.text_field k %>
+      </div>
+    <% else %>
+    <% end %>
+  <% end %>
+  <br>
+  <div>
+    <%= form.submit @submit, class: button_class('success') %>
+  </div>
+<% end %>
