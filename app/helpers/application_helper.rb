@@ -125,6 +125,39 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def show_model_table(table_name, raw_data, options={translations: {}})
+    html =  '<div class="card shadow mb-4">'
+    html +=    '<div class="card-header py-3">'
+    html +=      '<h6 class="m-0 font-weight-bold text-primary">' + table_name + '</h6>'
+    html +=    '</div>'
+    html +=    '<div class="card-body">'
+    html +=      '<div class="table-responsive">'
+    html +=        '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">'
+    html +=          '<tfoot>'
+    html +=          '<tbody>'
+    if options[:translations].present?
+      options[:translations].each do |k, v|
+        html +=        '<tr>'
+          html +=        '<td><b>' + v + '</b></td>'
+          html +=        '<td>' + raw_data[k].to_s.humanize.titleize + '</td>'
+        html +=        '</tr>'
+      end
+    else
+      raw_data.attributes.each do |k, v|
+        html +=        '<tr>'
+          html +=        '<td><b>' + k.humanize.titleize + '</b></td>'
+          html +=        '<td>' + v.to_s.humanize.titleize + '</td>'
+        html +=        '</tr>'
+      end
+    end
+    html +=          '</tbody>'
+    html +=        '</table>'
+    html +=      '</div>'
+    html +=    '</div>'
+    html +=  '</div>'
+    html.html_safe
+  end
+
   def model_table(table_name, headers, raw_data, options={translations: {}})
     html =  '<div class="card shadow mb-4">'
     html +=    '<div class="card-header py-3">'
