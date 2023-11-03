@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @object %>
+
+<div>
+  <% edit_text = @texts.present? && @texts[0].present? ? @texts[0]  : 'Edit this category' %>
+  <% back_text = @texts.present? && @texts[1].present? ? @texts[1] : 'Back to categories' %>
+  <% delete_text = @texts.present? && @texts[2].present? ? @texts[2] : 'Destroy this category'%>
+
+  <%= easy_link(edit_text, 'info', send('edit_' + @object_name[0] + '_path', @object)) %>
+  <%= easy_link(back_text, 'secondary', send(@object_name[1] + '_path')) %>
+  <%= button_to delete_text, @model, method: :delete, class: button_class('danger') %>
+</div>
