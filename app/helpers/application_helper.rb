@@ -125,7 +125,7 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def show_model_table(table_name, raw_data, options={translations: {}})
+  def show_model_table(table_name, raw_data, options={translations: {}, send_methods: {}})
     html =  '<div class="card shadow mb-4">'
     html +=    '<div class="card-header py-3">'
     html +=      '<h6 class="m-0 font-weight-bold text-primary">' + table_name + '</h6>'
@@ -139,14 +139,22 @@ module ApplicationHelper
       options[:translations].each do |k, v|
         html +=        '<tr>'
           html +=        '<td><b>' + v + '</b></td>'
-          html +=        '<td>' + raw_data[k].to_s.humanize.titleize + '</td>'
+          if options[:send_methods][k].present?
+            html +=        '<td>' + multiple_send(raw_data, options[:send_methods][k]) + '</td>'
+          else
+            html +=        '<td>' + raw_data[k].to_s.humanize.titleize + '</td>'
+          end
         html +=        '</tr>'
       end
     else
       raw_data.attributes.each do |k, v|
         html +=        '<tr>'
           html +=        '<td><b>' + k.humanize.titleize + '</b></td>'
-          html +=        '<td>' + v.to_s.humanize.titleize + '</td>'
+          if options[:send_methods][k].present?
+            html +=        '<td>' + multiple_send(raw_data, options[:send_methods][k]) + '</td>'
+          else
+            html +=        '<td>' + v.to_s.humanize.titleize + '</td>'
+          end
         html +=        '</tr>'
       end
     end
@@ -295,5 +303,13 @@ module ApplicationHelper
     end
 
     ''
+  end
+
+  def multiple_send(object, methods)
+    methods.each do |m|
+      object = object.send(m)
+    end
+
+    object.to_s.humanize.titleize
   end
 end
