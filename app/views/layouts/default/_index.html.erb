@@ -1,7 +1,5 @@
 <p style="color: green"><%= notice %></p>
 
-<h1><%= @page_name %></h1>
-
 <div id="categories">
   <% if @options.blank?%>
     <%= model_table(@page_name, @headers, @models) %>
