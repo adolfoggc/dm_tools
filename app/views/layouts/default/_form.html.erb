@@ -12,13 +12,16 @@
   <% end %>
 
   <% @form_constructor.each do |k,v| %>
-    <% if v[0] == 'string' %>
-      <div>
+    <div>
+      <% if v[0] == 'string' %>
         <b><%= form.label k, v[1], style: "display: block" %></b>
         <%= form.text_field k %>
-      </div>
-    <% else %>
-    <% end %>
+      <% elsif v[0] == 'select' %>
+        <b><%= form.label k, v[1], style: "display: block" %></b>
+        <%= easy_select(k, v[2], v[3], options={blank: '', event_type: '', event_method: ''}) %>
+      <% end %>
+    </div>
+    <br>
   <% end %>
   <br>
   <div>
