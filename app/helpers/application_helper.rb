@@ -22,8 +22,8 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def easy_select(id, data, options={blank: '', event_type: '', event_method: ''})
-    html =  '<select id=' + id + ' name=' + id + ' class="custom-select custom-select-sm form-control form-control-sm">'
+  def easy_select(id, data, model_name, options={blank: '', event_type: '', event_method: ''})
+    html =  '<select id=' + model_name + '_' + id.to_s + ' name=' + model_name + '[' + id.to_s + ']' + ' class="custom-select custom-select-sm form-control form-control-sm">'
     html +=   '<option hidden selected>' + options[:blank] + '<opton>' if options[:blank].present?
     data.each do |k, v|
       html += '<option value=' + v.to_s + '>' + k.titleize + '</option>'
@@ -139,7 +139,7 @@ module ApplicationHelper
       options[:translations].each do |k, v|
         html +=        '<tr>'
           html +=        '<td><b>' + v + '</b></td>'
-          if options[:send_methods][k].present?
+          if options[:send_methods].present? && options[:send_methods][k].present?
             html +=        '<td>' + multiple_send(raw_data, options[:send_methods][k]) + '</td>'
           else
             html +=        '<td>' + raw_data[k].to_s.humanize.titleize + '</td>'
@@ -150,7 +150,7 @@ module ApplicationHelper
       raw_data.attributes.each do |k, v|
         html +=        '<tr>'
           html +=        '<td><b>' + k.humanize.titleize + '</b></td>'
-          if options[:send_methods][k].present?
+          if options[:send_methods].present? && options[:send_methods][k].present?
             html +=        '<td>' + multiple_send(raw_data, options[:send_methods][k]) + '</td>'
           else
             html +=        '<td>' + v.to_s.humanize.titleize + '</td>'
@@ -194,7 +194,11 @@ module ApplicationHelper
     raw_data.each do |line|
       html +=          '<tr>'
       headers.keys.each do |k|
-        html +=        '<td>' + line[k].to_s.titleize + '</td>'
+        if options[:send_methods].present? && options[:send_methods][k].present?
+          html +=        '<td>' + multiple_send(line, options[:send_methods][k]) + '</td>'
+        else
+          html +=        '<td>' + line[k].to_s.titleize + '</td>'
+        end
       end
       show_path = line.model_name.singular + '_path'
       edit_path = 'edit_' + line.model_name.singular + '_path'
