@@ -192,17 +192,19 @@ module ApplicationHelper
       html +=          '<tr>'
       headers.keys.each do |k|
         if options[:send_methods].present? && options[:send_methods][k].present?
-          html +=        '<td>' + multiple_send(line, options[:send_methods][k]) + '</td>'
+          html +=        '<td>' + line.send(options[:send_methods][k]).to_s.humanize.titleize + '</td>'
         else
           html +=        '<td>' + line[k].to_s.titleize + '</td>'
         end
       end
-      show_path = line.model_name.singular + '_path'
-      edit_path = 'edit_' + line.model_name.singular + '_path'
       if !options[:translations].blank?
         options[:translations].each do |k, v|
-          html +=            '<td>' + easy_link(v, 'primary', send(show_path, line[:id])) + '</td>' if k == :show
-          html +=            '<td>' + easy_link(v, 'info', send(edit_path, line[:id])) + '</td>' if k == :edit
+          if [:show, :edit].include?(k)
+            show_path = line.model_name.singular + '_path'
+            edit_path = 'edit_' + line.model_name.singular + '_path'
+            html +=            '<td>' + easy_link(v, 'primary', send(show_path, line[:id])) + '</td>' if k == :show
+            html +=            '<td>' + easy_link(v, 'info', send(edit_path, line[:id])) + '</td>' if k == :edit
+          end
         end
       end
       if !options[:link].blank?
