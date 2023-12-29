@@ -179,13 +179,10 @@ module ApplicationHelper
     headers.values.each do |h|
       html +=            '<th>' + h + '</th>'
     end
-    if options[:translations]&.size == 2
-      options[:translations].each do |t|
-        html +=              '<th>' + t + '</th>'
+    if !options[:translations].blank?
+      options[:translations].each do |k, v|
+        html +=              '<th>' + v + '</th>'
       end
-    else
-      html +=              '<th>Show</th>'
-      html +=              '<th>Edit</th>'
     end
     html +=            '</tr>'
     html +=          '</thead>'
@@ -202,15 +199,15 @@ module ApplicationHelper
       end
       show_path = line.model_name.singular + '_path'
       edit_path = 'edit_' + line.model_name.singular + '_path'
-      if options[:translations]&.size == 2
-        show_text = options[:translations][0]
-        edit_text = options[:translations][1]
-      else
-        show_text = 'Show'
-        edit_text = 'Edit'
+      if !options[:translations].blank?
+        options[:translations].each do |k, v|
+          html +=            '<td>' + easy_link(v, 'primary', send(show_path, line[:id])) + '</td>' if k == :show
+          html +=            '<td>' + easy_link(v, 'info', send(edit_path, line[:id])) + '</td>' if k == :edit
+        end
       end
-      html +=            '<td>' + easy_link(show_text, 'primary', send(show_path, line[:id])) + '</td>'
-      html +=            '<td>' + easy_link(edit_text, 'info', send(edit_path, line[:id])) + '</td>'
+      if !options[:link].blank?
+        html +=            '<td>' + easy_link(options[:link][:text], 'success', options[:link][:link] + line[:id].to_s) + '</td>'
+      end
       html +=          '</tr>'
     end
     html +=          '</tbody>'
