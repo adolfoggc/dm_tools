@@ -181,8 +181,15 @@ module ApplicationHelper
     end
     if !options[:translations].blank?
       options[:translations].each do |k, v|
-        html +=              '<th>' + v + '</th>'
+        if [:show, :edit].include?(k)
+          html +=              '<th></th>'
+        else
+          html +=              '<th>' + v + '</th>'
+        end
       end
+    end
+    if !options[:link].blank?
+      html +=              '<th></th>'
     end
     html +=            '</tr>'
     html +=          '</thead>'
