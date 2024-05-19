@@ -15,9 +15,8 @@
   <%= sidebar_element('Início', 'fas fa-home', auth_home_path) %>
 
   <%# SIDEBAR HELPERS AREA %>
-
-  <%= sidebar_element(t('monsters'), 'fa-skull', monsters_path) %>
-  <%= collapse_elements(t('equipments'), 'fas fa-shield-alt', [''], [[t('armors'), t('weapons')]], [[armors_path, weapons_path]]) %>
+  <%= collapse_elements(t('Aventura'), 'fas fa-swords', [t('creatures'), t('equipments')], [[t('monsters')], [t('armors'), t('weapons')]], [[monsters_path], [armors_path, weapons_path]]) %>
+  <%= collapse_elements(t('reference'), 'fas fa-shield-alt', [t('creatures'), t('equipments')], [[t('monsters')], [t('armors'), t('weapons')]], [[monsters_path], [armors_path, weapons_path]]) %>
   <%= collapse_elements(t('tools'), 'fa-dice-d20', [t('calculators'), t('item_creator')], [[t('encounter_calculator')],[t('armors'), t('weapons')]], [[encounter_calculator_path], [new_armor_path, new_weapon_path]]) %>
   <%# END OF SIDEBAR HELPERS AREA %>
   
