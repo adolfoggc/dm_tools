@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_10_030357) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_20_000556) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -87,6 +87,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_10_030357) do
     t.datetime "updated_at", null: false
     t.integer "population"
     t.integer "kind"
+  end
+
+  create_table "sheets", force: :cascade do |t|
+    t.string "name"
+    t.string "player_name"
+    t.integer "alignment"
+    t.string "background"
+    t.integer "race"
+    t.integer "experience"
+    t.integer "strength"
+    t.integer "dexterity"
+    t.integer "constitution"
+    t.integer "wisdom"
+    t.integer "intelligence"
+    t.integer "charisma"
+    t.integer "hp"
+    t.integer "temp_hp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "taverns", force: :cascade do |t|

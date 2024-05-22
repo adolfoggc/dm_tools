@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
   
   authenticated :user do
+    resources :sheets
     resources :clocks
     resources :counters
     resources :campaigns
