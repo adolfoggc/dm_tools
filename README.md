@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-# Rails 7 Template
-> My quick rails template
-=======
 # DM Tools
 > Swiss Army knife to roll an rpg smoothly!
->>>>>>> 91c1b5e (Add readme)
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Project Status](#project-status)
-<<<<<<< HEAD
-* [Room for Improvement](#room-for-improvement)
-=======
 * [Next Steps](#next-steps)
->>>>>>> 91c1b5e (Add readme)
 * [Acknowledgements](#acknowledgements)
 <!-- * [License](#license) -->
 
@@ -33,11 +24,6 @@
 
 
 ## Project Status
-<<<<<<< HEAD
-Active and receiving updates when it seems necessary
-
-
-=======
 Active!
 
 
@@ -48,7 +34,6 @@ Active!
 - Add some codes to Code Pen for easy use online
 
 
->>>>>>> 91c1b5e (Add readme)
 ## Acknowledgements
 Thanks to:
 - My parents
