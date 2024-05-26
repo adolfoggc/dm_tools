@@ -22,6 +22,21 @@ class Sheet < ApplicationRecord
     halfling: 6,
   }
 
+  enum background: {
+    acolyte: 0,
+    charlatan: 1,
+    criminal: 2,
+    entretainer: 3,
+    folk_hero: 4,
+    guild_artisan: 5,
+    hermit: 6,
+    noble: 7,
+    outlander: 8,
+    sage: 9,
+    sailor: 10,
+    urchin: 11
+  }
+
   def modifier(ability)
     (ability/2) - 5
   end
