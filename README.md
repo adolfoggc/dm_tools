@@ -28,11 +28,7 @@ Active!
 
 
 ## Next Steps
-- Settlement generator [Working on it!]
-- Add some Settlement traits
-- More drinks and some foods for a Tavern
-- Add some codes to Code Pen for easy use online
-
+- Add sheets
 
 ## Acknowledgements
 Thanks to:

@@ -1,5 +1,6 @@
 class SheetsController < ApplicationController
   before_action :set_sheet, only: %i[ show edit update destroy ]
+  before_action :form_hashes, only: %i[ new create edit update ]
 
   # GET /sheets or /sheets.json
   def index
@@ -13,6 +14,7 @@ class SheetsController < ApplicationController
   # GET /sheets/new
   def new
     @sheet = Sheet.new
+    
   end
 
   # GET /sheets/1/edit
@@ -66,5 +68,38 @@ class SheetsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def sheet_params
       params.require(:sheet).permit(:name, :player_name, :alignment, :background, :race, :experience, :strength, :dexterity, :constitution, :wisdom, :intelligence, :charisma, :hp, :temp_hp)
+    end
+
+    def form_hashes
+      @backgrounds = backgrounds
+      @initial_classes = initial_classes
+      @races = races
+    end
+
+    def races
+      hash = {}
+      Sheet.races.each do |k,v|
+        hash[I18n.translate("race.#{k}").titleize] = v
+      end
+
+      hash.sort.to_h
+    end
+
+    def backgrounds
+      hash = {}
+      Sheet.backgrounds.each do |k,v|
+        hash[I18n.translate("background.#{k}").titleize] = v
+      end
+
+      hash.sort.to_h
+    end
+
+    def initial_classes
+      hash = {}
+      Sheet.initial_classes.each do |k,v|
+        hash[I18n.translate("class.#{k}").titleize] = v
+      end
+
+      hash.sort.to_h
     end
 end

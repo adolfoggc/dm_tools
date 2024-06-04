@@ -11,74 +11,75 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col ">
+      <%= form.label :name, I18n.translate('name').capitalize, style: "display: block" %>
+      <%= form.text_field :name %>
+    </div>
+    <div class="col">
+      <%= form.label :player_name, I18n.translate('player_name').capitalize, style: "display: block" %>
+      <%= form.text_field :player_name %>
+    </div>
+    <div class="col">
+      <%= form.label :background, I18n.translate('background.background').capitalize, style: "display: block" %>
+      <%= easy_select('background', @backgrounds, 'sheet') %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%= form.label :alignment, I18n.translate('alignment.alignment').capitalize, style: "display: block" %>
+      <%= form.number_field :alignment %>
+    </div>
+    <div class="col">
+      <%= form.label :race, I18n.translate('race.race').capitalize, style: "display: block" %>
+      <%= easy_select('race', @races, 'sheet') %>
+    </div>
+    <div class="col">
+      <%= form.label :initial_class, I18n.translate('class.class').capitalize, style: "display: block" %>
+      <%= easy_select('initial_class', @initial_classes, 'sheet') %>
+    </div>
   </div>
 
   <div>
-    <%= form.label :player_name, style: "display: block" %>
-    <%= form.text_field :player_name %>
-  </div>
-
-  <div>
-    <%= form.label :alignment, style: "display: block" %>
-    <%= form.number_field :alignment %>
-  </div>
-
-  <div>
-    <%= form.label :background, style: "display: block" %>
-    <%= form.text_field :background %>
-  </div>
-
-  <div>
-    <%= form.label :race, style: "display: block" %>
-    <%= form.number_field :race %>
-  </div>
-
-  <div>
-    <%= form.label :experience, style: "display: block" %>
-    <%= form.number_field :experience %>
-  </div>
-
-  <div>
-    <%= form.label :strength, style: "display: block" %>
+    <%= form.label :strength, I18n.translate('abilities.strength').capitalize, style: "display: block" %>
     <%= form.number_field :strength %>
   </div>
 
   <div>
-    <%= form.label :dexterity, style: "display: block" %>
+    <%= form.label :dexterity, I18n.translate('abilities.dexterity').capitalize, style: "display: block" %>
     <%= form.number_field :dexterity %>
   </div>
 
   <div>
-    <%= form.label :constitution, style: "display: block" %>
+    <%= form.label :constitution, I18n.translate('abilities.constitution').capitalize, style: "display: block" %>
     <%= form.number_field :constitution %>
   </div>
 
   <div>
-    <%= form.label :wisdom, style: "display: block" %>
+    <%= form.label :wisdom, I18n.translate('abilities.wisdom').capitalize, style: "display: block" %>
     <%= form.number_field :wisdom %>
   </div>
 
   <div>
-    <%= form.label :intelligence, style: "display: block" %>
+    <%= form.label :intelligence, I18n.translate('abilities.intelligence').capitalize, style: "display: block" %>
     <%= form.number_field :intelligence %>
   </div>
 
   <div>
-    <%= form.label :charisma, style: "display: block" %>
+    <%= form.label :charisma, I18n.translate('abilities.charisma').capitalize, style: "display: block" %>
     <%= form.number_field :charisma %>
   </div>
 
   <div>
-    <%= form.label :hp, style: "display: block" %>
+    <%= form.label :hp, I18n.translate('hp').capitalize, style: "display: block" %>
     <%= form.number_field :hp %>
-  </div>
-
-  <div>
-    <%= form.label :temp_hp, style: "display: block" %>
-    <%= form.number_field :temp_hp %>
   </div>
 
   <div>
