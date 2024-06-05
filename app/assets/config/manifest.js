@@ -13,3 +13,5 @@
 //= link vendor/jquery.min.js
 //= link font_awesome/all.min.css
 //= link base.css
+//= link sheets.css
+//= link sheets.js

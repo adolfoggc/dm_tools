@@ -1,0 +1,13 @@
+form label {
+  margin-bottom: 0 !important;
+}
+
+form input, form select {
+  margin-bottom: 6px !important;
+}
+
+#sheet_strength, #sheet_dexterity, #sheet_constitution,
+#sheet_intelligence, #sheet_wisdom, #sheet_charisma,
+#sheet_name, #sheet_player_name {
+  width: 100%;
+}
