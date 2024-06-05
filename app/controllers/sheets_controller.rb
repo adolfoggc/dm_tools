@@ -14,7 +14,6 @@ class SheetsController < ApplicationController
   # GET /sheets/new
   def new
     @sheet = Sheet.new
-    
   end
 
   # GET /sheets/1/edit
@@ -74,6 +73,7 @@ class SheetsController < ApplicationController
       @backgrounds = backgrounds
       @initial_classes = initial_classes
       @races = races
+      @alignments = alignments
     end
 
     def races
@@ -98,6 +98,15 @@ class SheetsController < ApplicationController
       hash = {}
       Sheet.initial_classes.each do |k,v|
         hash[I18n.translate("class.#{k}").titleize] = v
+      end
+
+      hash.sort.to_h
+    end
+
+    def alignments
+      hash = {}
+      Sheet.alignments.each do |k,v|
+        hash[I18n.translate("alignment.#{k}").titleize] = v
       end
 
       hash.sort.to_h

@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "sheets", "data-turbo-track": "reload" %>
 <%= form_with(model: sheet) do |form| %>
   <% if sheet.errors.any? %>
     <div style="color: red">
@@ -10,13 +11,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="row">
-    <div class="col">
-    </div>
-    <div class="col">
-    </div>
-  </div>
 
   <div class="row">
     <div class="col ">
@@ -35,7 +29,7 @@
   <div class="row">
     <div class="col">
       <%= form.label :alignment, I18n.translate('alignment.alignment').capitalize, style: "display: block" %>
-      <%= form.number_field :alignment %>
+      <%= easy_select('alignment', @alignments, 'sheet') %>
     </div>
     <div class="col">
       <%= form.label :race, I18n.translate('race.race').capitalize, style: "display: block" %>
@@ -47,34 +41,94 @@
     </div>
   </div>
 
-  <div>
-    <%= form.label :strength, I18n.translate('abilities.strength').capitalize, style: "display: block" %>
-    <%= form.number_field :strength %>
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
   </div>
 
-  <div>
-    <%= form.label :dexterity, I18n.translate('abilities.dexterity').capitalize, style: "display: block" %>
-    <%= form.number_field :dexterity %>
-  </div>
-
-  <div>
-    <%= form.label :constitution, I18n.translate('abilities.constitution').capitalize, style: "display: block" %>
-    <%= form.number_field :constitution %>
-  </div>
-
-  <div>
-    <%= form.label :wisdom, I18n.translate('abilities.wisdom').capitalize, style: "display: block" %>
-    <%= form.number_field :wisdom %>
-  </div>
-
-  <div>
-    <%= form.label :intelligence, I18n.translate('abilities.intelligence').capitalize, style: "display: block" %>
-    <%= form.number_field :intelligence %>
-  </div>
-
-  <div>
-    <%= form.label :charisma, I18n.translate('abilities.charisma').capitalize, style: "display: block" %>
-    <%= form.number_field :charisma %>
+  <div class="row">
+    <div class="col-4">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col text-center">
+              <%= I18n.translate("abilities.ability").titleize %>
+            </div>
+            <div class="col text-center">
+              <%= I18n.translate("abilities.value").titleize %>
+            </div>
+            <div class="col text-center">
+              <%= I18n.translate("abilities.modifier").titleize %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <%= form.label :strength, I18n.translate('abilities.strength').capitalize, style: "display: block" %>
+            </div>
+            <div class="col">
+              <%= form.number_field :strength, {value: 8, min: 3, max: 18, onchange: 'get_mod("strength")'} %>
+            </div>
+            <div class="col text-center" id="strength_mod">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <%= form.label :dexterity, I18n.translate('abilities.dexterity').capitalize, style: "display: block" %>
+            </div>
+            <div class="col">
+              <%= form.number_field :dexterity, {value: 8, min: 3, max: 18, onchange: 'get_mod("dexterity")'} %>
+            </div>
+            <div class="col text-center" id="dexterity_mod">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <%= form.label :constitution, I18n.translate('abilities.constitution').capitalize, style: "display: block" %>
+            </div>
+            <div class="col">
+              <%= form.number_field :constitution, {value: 8, min: 3, max: 18, onchange: 'get_mod("constitution")'} %>
+            </div>
+            <div class="col text-center" id="constitution_mod">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <%= form.label :intelligence, I18n.translate('abilities.intelligence').capitalize, style: "display: block" %>
+            </div>
+            <div class="col">
+              <%= form.number_field :intelligence, {value: 8, min: 3, max: 18, onchange: 'get_mod("intelligence")'} %>
+            </div>
+            <div class="col text-center" id="intelligence_mod">
+            </div>  
+          </div>
+          <div class="row">
+            <div class="col">
+              <%= form.label :wisdom, I18n.translate('abilities.wisdom').capitalize, style: "display: block" %>
+            </div>
+            <div class="col">
+              <%= form.number_field :wisdom, {value: 8, min: 3, max: 18, onchange: 'get_mod("wisdom")'} %>
+            </div>
+            <div class="col text-center" id="wisdom_mod">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <%= form.label :charisma, I18n.translate('abilities.charisma').capitalize, style: "display: block" %>
+            </div>
+            <div class="col">
+              <%= form.number_field :charisma, {value: 8, min: 3, max: 18, onchange: 'get_mod("charisma")'} %>
+            </div>
+            <div class="col text-center" id="charisma_mod">
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <%= I18n.translate('rules.abilities_rule_1').html_safe %>
+    </div>
   </div>
 
   <div>
@@ -86,3 +140,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+<%= javascript_include_tag "sheets", "data-turbo-track": "reload", defer: true %>

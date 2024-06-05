@@ -13,7 +13,7 @@ class Sheet < ApplicationRecord
   }
 
   enum race: {
-    dragonborn: 0,
+    dragonborn_black: 0,
     dwarf_hill: 1,
     dwarf_mountain: 2,
     elf_drow: 3,
@@ -27,7 +27,16 @@ class Sheet < ApplicationRecord
     halfling_stout: 11,
     human: 12,
     human_variant: 13,
-    tiefling: 14
+    tiefling: 14,
+    dragonborn_blue: 15,
+    dragonborn_brass: 16,
+    dragonborn_bronze: 17,
+    dragonborn_copper: 18,
+    dragonborn_gold: 19,
+    dragonborn_green: 20,
+    dragonborn_red: 21,
+    dragonborn_silver: 22,
+    dragonborn_white: 23
   }
 
   enum background: {
