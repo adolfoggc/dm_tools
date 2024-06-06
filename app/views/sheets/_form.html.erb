@@ -54,13 +54,13 @@
         <div class="col">
           <div class="row">
             <div class="col text-center">
-              <%= I18n.translate("abilities.ability").titleize %>
+              <strong><%= I18n.translate("abilities.ability").titleize %></strong>
             </div>
             <div class="col text-center">
-              <%= I18n.translate("abilities.value").titleize %>
+              <strong><%= I18n.translate("abilities.value").titleize %></strong>
             </div>
             <div class="col text-center">
-              <%= I18n.translate("abilities.modifier").titleize %>
+              <strong><%= I18n.translate("abilities.modifier").titleize %></strong>
             </div>
           </div>
           <div class="row">
@@ -127,7 +127,15 @@
       </div>
     </div>
     <div class="col-8">
-      <%= I18n.translate('rules.abilities_rule_1').html_safe %>
+      <div class="row">
+        <div class="col">
+          <%= I18n.translate('rules.abilities_rule_1').html_safe %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="race_modifiers">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -140,4 +148,78 @@
     <%= form.submit %>
   </div>
 <% end %>
+<div id="translations">
+  <div id="race_modifier_0">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.0') %>
+  </div>
+  <div id="race_modifier_1">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.1') %>
+  </div>
+  <div id="race_modifier_2">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.2') %>
+  </div>
+  <div id="race_modifier_3">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.3') %>
+  </div>
+  <div id="race_modifier_4">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.4') %>
+  </div>
+  <div id="race_modifier_5">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.5') %>
+  </div>
+  <div id="race_modifier_6">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.6') %>
+  </div>
+  <div id="race_modifier_7">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.7') %>
+  </div>
+  <div id="race_modifier_8">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.8') %>
+  </div>
+  <div id="race_modifier_9">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.9') %>
+  </div>
+  <div id="race_modifier_10">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.10') %>
+  </div>
+  <div id="race_modifier_11">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.11') %>
+  </div>
+  <div id="race_modifier_12">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.12') %>
+  </div>
+  <div id="race_modifier_13">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.13') %>
+  </div>
+  <div id="race_modifier_14">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.14') %>
+  </div>
+  <div id="race_modifier_15">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.15') %>
+  </div>
+  <div id="race_modifier_16">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.16') %>
+  </div>
+  <div id="race_modifier_17">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.17') %>
+  </div>
+  <div id="race_modifier_18">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.18') %>
+  </div>
+  <div id="race_modifier_19">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.19') %>
+  </div>
+  <div id="race_modifier_20">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.20') %>
+  </div>
+  <div id="race_modifier_21">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.21') %>
+  </div>
+  <div id="race_modifier_22">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.22') %>
+  </div>
+  <div id="race_modifier_23">
+    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.23') %>
+  </div>
+</div>
 <%= javascript_include_tag "sheets", "data-turbo-track": "reload", defer: true %>

@@ -1,6 +1,7 @@
 $(function(){
   get_all_mods();
   resize_all();
+  $("#translations").hide();
 })
 
 function get_mod(id){
