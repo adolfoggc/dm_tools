@@ -1,7 +1,7 @@
 $(function(){
   get_all_mods();
-  resize_all();
   $("#translations").hide();
+  update_race();
 })
 
 function get_mod(id){
@@ -19,21 +19,10 @@ function modifier(ability){
   return mod;
 }
 
-function resize_mod(id){
-  height = $('.real_row').height();
-  console.log(height);
-  $(id).height(height);
-  $(id).css('line-height', height + 'px');
-  $(id).css('font-size', Math.floor(height/3) + 'px');
-}
-
-function resize_all(){
-  resize_mod('#strength_mod');
-  resize_mod('#dexterity_mod');
-  resize_mod('#constitution_mod');
-  resize_mod('#intelligence_mod');
-  resize_mod('#wisdom_mod');
-  resize_mod('#charisma_mod');
+function update_race(){
+  val = $('#sheet_race').val();
+  msg = $('#race_modifier_' + val).html()
+  $('#race_modifiers').html(msg)
 }
 
 function get_all_mods(){

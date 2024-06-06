@@ -33,7 +33,8 @@
     </div>
     <div class="col">
       <%= form.label :race, I18n.translate('race.race').capitalize, style: "display: block" %>
-      <%= easy_select('race', @races, 'sheet') %>
+      <%= easy_select('race', @races, 'sheet', {event_method: "onchange=\"update_race()\""}) %>
+      
     </div>
     <div class="col">
       <%= form.label :initial_class, I18n.translate('class.class').capitalize, style: "display: block" %>
