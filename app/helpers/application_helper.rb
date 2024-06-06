@@ -23,7 +23,9 @@ module ApplicationHelper
   end
 
   def easy_select(id, data, model_name, options={blank: '', event_type: '', event_method: ''})
-    html =  '<select id=' + model_name + '_' + id.to_s + ' name=' + model_name + '[' + id.to_s + ']' + ' class="custom-select custom-select-sm form-control form-control-sm">'
+    html =  '<select id=' + model_name + '_' + id.to_s + ' name=' + model_name + '[' + id.to_s + ']' + ' class="custom-select custom-select-sm form-control form-control-sm"'
+    html += ' ' + options[:event_method] if options[:event_method].present?
+    html += '>'
     html +=   '<option hidden selected>' + options[:blank] + '<opton>' if options[:blank].present?
     data.each do |k, v|
       html += '<option value=' + v.to_s + '>' + k.titleize + '</option>'
@@ -351,5 +353,15 @@ module ApplicationHelper
     end
 
     object.to_s.humanize.titleize
+  end
+
+  def translate(args)
+    str = ''
+    args.each_with_index do |a, i|
+      str += I18n.translate(a)
+      str += ' ' if (i + 1) != args.size 
+    end
+
+    str
   end
 end
