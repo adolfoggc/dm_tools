@@ -1,72 +1,136 @@
 <div id="<%= dom_id sheet %>">
-  <p>
-    <strong><%= I18n.translate('name').titleize %></strong>
-    <%= sheet.name %>
-  </p>
+  <div class="row">
+    <div class="col ">
+      <strong><%= I18n.translate('name').capitalize %>: </strong>
+      <%= sheet.name %>
+    </div>
+    <div class="col">
+      <strong><%= I18n.translate('player_name').capitalize %>: </strong>
+      <%=  sheet.player_name %>
+    </div>
+    <div class="col">
+      <strong><%= I18n.translate('background.background').capitalize %>: </strong>
+      <%= sheet.background %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <strong><%= I18n.translate('alignment.alignment').capitalize %>: </strong>
+      <%= sheet.alignment %>
+    </div>
+    <div class="col">
+      <strong><%= I18n.translate('race.race').capitalize %></strong>
+      <%= sheet.race %>
+    </div>
+    <div class="col">
+      <strong><%= I18n.translate('class.class').capitalize %></strong>
+      <%= sheet.initial_class %>
+    </div>
+  </div>
 
-  <p>
-    <strong>Player name:</strong>
-    <%= sheet.player_name %>
-  </p>
+  <div class="row">
+    <div class="col-4">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col text-center">
+              <strong><%= I18n.translate("abilities.ability").titleize %></strong>
+            </div>
+            <div class="col text-center">
+              <strong><%= I18n.translate("abilities.value").titleize %></strong>
+            </div>
+            <div class="col text-center">
+              <strong><%= I18n.translate("abilities.modifier").titleize %></strong>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <%= I18n.translate('abilities.strength').capitalize %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.strength %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.modifier(sheet.strength) %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <%= I18n.translate('abilities.dexterity').capitalize %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.dexterity %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.modifier(sheet.dexterity) %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <%= I18n.translate('abilities.constitution').capitalize %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.constitution %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.modifier(sheet.constitution) %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <%= I18n.translate('abilities.intelligence').capitalize %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.intelligence %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.modifier(sheet.intelligence) %>
+            </div>  
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <%= I18n.translate('abilities.wisdom').capitalize %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.wisdom %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.modifier(sheet.wisdom) %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <%= I18n.translate('abilities.charisma').capitalize %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.charisma %>
+            </div>
+            <div class="col text-center">
+              <%= sheet.modifier(sheet.charisma) %>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col">
+          <%= I18n.translate('rules.abilities_rule_1').html_safe %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="race_modifiers">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="class_modifiers">
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <p>
-    <strong>Alignment:</strong>
-    <%= sheet.alignment %>
-  </p>
-
-  <p>
-    <strong>Background:</strong>
-    <%= sheet.background %>
-  </p>
-
-  <p>
-    <strong>Race:</strong>
-    <%= sheet.race %>
-  </p>
-
-  <p>
-    <strong>Experience:</strong>
-    <%= sheet.experience %>
-  </p>
-
-  <p>
-    <strong>Strength:</strong>
-    <%= sheet.strength %>
-  </p>
-
-  <p>
-    <strong>Dexterity:</strong>
-    <%= sheet.dexterity %>
-  </p>
-
-  <p>
-    <strong>Constitution:</strong>
-    <%= sheet.constitution %>
-  </p>
-
-  <p>
-    <strong>Wisdom:</strong>
-    <%= sheet.wisdom %>
-  </p>
-
-  <p>
-    <strong>Intelligence:</strong>
-    <%= sheet.intelligence %>
-  </p>
-
-  <p>
-    <strong>Charisma:</strong>
-    <%= sheet.charisma %>
-  </p>
-
-  <p>
-    <strong>Hp:</strong>
+  <div>
+    <strong><%= I18n.translate('hp').capitalize %>: </strong>
     <%= sheet.hp %>
-  </p>
-
-  <p>
-    <strong>Temp hp:</strong>
-    <%= sheet.temp_hp %>
-  </p>
-
+  </div>
 </div>
