@@ -79,7 +79,7 @@ class SheetsController < ApplicationController
     def races
       hash = {}
       Sheet.races.each do |k,v|
-        hash[I18n.translate("race.#{k}").titleize] = v
+        hash[I18n.translate("race.#{k}").titleize] = k
       end
 
       hash.sort.to_h
@@ -88,7 +88,7 @@ class SheetsController < ApplicationController
     def backgrounds
       hash = {}
       Sheet.backgrounds.each do |k,v|
-        hash[I18n.translate("background.#{k}").titleize] = v
+        hash[I18n.translate("background.#{k}").titleize] = k
       end
 
       hash.sort.to_h
@@ -97,7 +97,7 @@ class SheetsController < ApplicationController
     def initial_classes
       hash = {}
       Sheet.initial_classes.each do |k,v|
-        hash[I18n.translate("class.#{k}").titleize] = v
+        hash[I18n.translate("class.#{k}").titleize] = k
       end
 
       hash.sort.to_h
@@ -106,7 +106,7 @@ class SheetsController < ApplicationController
     def alignments
       hash = {}
       Sheet.alignments.each do |k,v|
-        hash[I18n.translate("alignment.#{k}").titleize] = v
+        hash[I18n.translate("alignment.#{k}").titleize] = k
       end
 
       hash.sort.to_h

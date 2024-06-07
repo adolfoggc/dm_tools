@@ -2,6 +2,7 @@ $(function(){
   get_all_mods();
   $("#translations").hide();
   update_race();
+  update_class();
 })
 
 function get_mod(id){
@@ -23,6 +24,23 @@ function update_race(){
   val = $('#sheet_race').val();
   msg = $('#race_modifier_' + val).html()
   $('#race_modifiers').html(msg)
+}
+
+function update_class(){
+  val = $('#sheet_initial_class').val();
+  msg = $('#hit_die').html()
+  
+  if(['1', '2', '3', '5', '8', '10'].includes(val)){
+    msg += 'd8';
+  } else if(['4', '6', '7'].includes(val)){
+    msg += 'd10';
+  } else if(['9', '11'].includes(val)){
+    msg += 'd6';
+  } else {
+    msg += 'd12';
+  }
+
+  $('#class_modifiers').html(msg)
 }
 
 function get_all_mods(){

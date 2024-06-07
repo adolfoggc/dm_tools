@@ -38,14 +38,7 @@
     </div>
     <div class="col">
       <%= form.label :initial_class, I18n.translate('class.class').capitalize, style: "display: block" %>
-      <%= easy_select('initial_class', @initial_classes, 'sheet') %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-    </div>
-    <div class="col">
+      <%= easy_select('initial_class', @initial_classes, 'sheet', {event_method: "onchange=\"update_class()\""}) %>
     </div>
   </div>
 
@@ -137,6 +130,10 @@
         <div class="col" id="race_modifiers">
         </div>
       </div>
+      <div class="row">
+        <div class="col" id="class_modifiers">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -150,77 +147,80 @@
   </div>
 <% end %>
 <div id="translations">
-  <div id="race_modifier_0">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.0') %>
+  <div id="race_modifier_dragonborn_black">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_black') %>
   </div>
-  <div id="race_modifier_1">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.1') %>
+  <div id="race_modifier_dwarf_hill">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dwarf_hill') %>
   </div>
-  <div id="race_modifier_2">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.2') %>
+  <div id="race_modifier_dwarf_mountain">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dwarf_mountain') %>
   </div>
-  <div id="race_modifier_3">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.3') %>
+  <div id="race_modifier_elf_drow">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.elf_drow') %>
   </div>
-  <div id="race_modifier_4">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.4') %>
+  <div id="race_modifier_elf_high">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.elf_high') %>
   </div>
-  <div id="race_modifier_5">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.5') %>
+  <div id="race_modifier_elf_wood">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.elf_wood') %>
   </div>
-  <div id="race_modifier_6">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.6') %>
+  <div id="race_modifier_gnome_forest">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.gnome_forest') %>
   </div>
-  <div id="race_modifier_7">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.7') %>
+  <div id="race_modifier_gnome_rock">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.gnome_rock') %>
   </div>
-  <div id="race_modifier_8">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.8') %>
+  <div id="race_modifier_half_elf">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.half_elf') %>
   </div>
-  <div id="race_modifier_9">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.9') %>
+  <div id="race_modifier_half_orc">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.half_orc') %>
   </div>
-  <div id="race_modifier_10">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.10') %>
+  <div id="race_modifier_halfling_lightfoot">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.halfling_lightfoot') %>
   </div>
-  <div id="race_modifier_11">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.11') %>
+  <div id="race_modifier_halfling_stout">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.halfling_stout') %>
   </div>
-  <div id="race_modifier_12">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.12') %>
+  <div id="race_modifier_human">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.human') %>
   </div>
-  <div id="race_modifier_13">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.13') %>
+  <div id="race_modifier_human_variant">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.human_variant') %>
   </div>
-  <div id="race_modifier_14">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.14') %>
+  <div id="race_modifier_tiefling">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.tiefling') %>
   </div>
-  <div id="race_modifier_15">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.15') %>
+  <div id="race_modifier_dragonborn_blue">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_blue') %>
   </div>
-  <div id="race_modifier_16">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.16') %>
+  <div id="race_modifier_dragonborn_brass">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_brass') %>
   </div>
-  <div id="race_modifier_17">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.17') %>
+  <div id="race_modifier_dragonborn_bronze">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_bronze') %>
   </div>
-  <div id="race_modifier_18">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.18') %>
+  <div id="race_modifier_dragonborn_copper">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_copper') %>
   </div>
-  <div id="race_modifier_19">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.19') %>
+  <div id="race_modifier_dragonborn_gold">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_gold') %>
   </div>
-  <div id="race_modifier_20">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.20') %>
+  <div id="race_modifier_dragonborn_green">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_green') %>
   </div>
-  <div id="race_modifier_21">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.21') %>
+  <div id="race_modifier_dragonborn_red">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_red') %>
   </div>
-  <div id="race_modifier_22">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.22') %>
+  <div id="race_modifier_dragonborn_silver">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_silver') %>
   </div>
-  <div id="race_modifier_23">
-    <strong><%= I18n.translate('abilities.modifiers').capitalize %>: </strong><%= I18n.translate('sheet.race_modifier.23') %>
+  <div id="race_modifier_dragonborn_white">
+    <strong><%= I18n.translate('race.racial_modifiers').titleize %>: </strong><%= I18n.translate('sheet.race_modifier.dragonborn_white') %>
+  </div>
+  <div id="hit_die">
+    <strong><%= I18n.translate('hit_die').titleize %>: </strong>
   </div>
 </div>
 <%= javascript_include_tag "sheets", "data-turbo-track": "reload", defer: true %>
