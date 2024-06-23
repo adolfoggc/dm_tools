@@ -74,6 +74,7 @@ class SheetsController < ApplicationController
       @initial_classes = initial_classes
       @races = races
       @alignments = alignments
+      @skills_per_background = skills_per_background
     end
 
     def races
@@ -110,5 +111,22 @@ class SheetsController < ApplicationController
       end
 
       hash.sort.to_h
+    end
+
+    def skills_per_background
+      {
+        acolyte: [I18n.translate('skill.insight').titleize, I18n.translate('skill.religion').titleize].sort,
+        charlatan: [I18n.translate('skill.deception').titleize, I18n.translate('skill.sleight_of_hand').titleize].sort ,
+        criminal: [I18n.translate('skill.deception').titleize, I18n.translate('skill.stealth').titleize].sort ,
+        entretainer: [I18n.translate('skill.acrobatics').titleize, I18n.translate('skill.performance').titleize].sort ,
+        folk_hero: [I18n.translate('skill.animal_handling').titleize, I18n.translate('skill.survival').titleize].sort ,
+        guild_artisan: [I18n.translate('skill.insight').titleize, I18n.translate('skill.persuasion').titleize].sort ,
+        hermit: [I18n.translate('skill.medicine').titleize, I18n.translate('skill.religion').titleize].sort ,
+        noble: [I18n.translate('skill.history').titleize, I18n.translate('skill.persuasion').titleize].sort ,
+        outlander: [I18n.translate('skill.athletics').titleize, I18n.translate('skill.survival').titleize].sort ,
+        sage: [I18n.translate('skill.arcana').titleize, I18n.translate('skill.history').titleize].sort ,
+        sailor: [I18n.translate('skill.athletics').titleize, I18n.translate('skill.intimidation').titleize].sort ,
+        urchin: [I18n.translate('skill.sleight_of_hand').titleize, I18n.translate('skill.stealth').titleize].sort 
+      }
     end
 end

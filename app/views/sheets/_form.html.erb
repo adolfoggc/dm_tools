@@ -23,7 +23,7 @@
     </div>
     <div class="col">
       <%= form.label :background, I18n.translate('background.background').capitalize, style: "display: block" %>
-      <%= easy_select('background', @backgrounds, 'sheet') %>
+      <%= easy_select('background', @backgrounds, 'sheet', {event_method: "onchange=\"update_background_skills()\""}) %>
     </div>
   </div>
   <div class="row">
@@ -134,6 +134,10 @@
         <div class="col" id="class_modifiers">
         </div>
       </div>
+      <div class="row">
+        <div class="col" id="background_modifiers">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -221,6 +225,42 @@
   </div>
   <div id="hit_die">
     <strong><%= I18n.translate('hit_die').titleize %>: </strong>
+  </div>
+  <div id="background_acolyte">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:acolyte].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_charlatan">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:charlatan].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_criminal">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:criminal].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_entretainer">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:entretainer].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_folk_hero">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:folk_hero].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_guild_artisan">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:guild_artisan].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_hermit">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:hermit].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_noble">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:noble].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_outlander">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:outlander].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_sage">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:sage].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_sailor">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:sailor].join(" #{I18n.translate('and')} ") %>
+  </div>
+  <div id="background_urchin">
+    <strong><%= I18n.translate('background.background_skills').titleize %>: </strong><%= @skills_per_background[:urchin].join(" #{I18n.translate('and')} ") %>
   </div>
 </div>
 <%= javascript_include_tag "sheets", "data-turbo-track": "reload", defer: true %>

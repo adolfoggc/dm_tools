@@ -176,3 +176,13 @@ weapon_proprieties_data = {
 
 seed_process('armor_propriety', armor_proprieties_data)
 seed_process('weapon_propriety', weapon_proprieties_data)
+
+sheets_data = {
+  1 => {
+    name: 'Coruja Branca', player_name: 'Érika', alignment: Sheet.alignments[:cg], background: Sheet.backgrounds[:entretainer],
+    race: Sheet.races[:human], strength: 16, dexterity: 13, constitution: 14, intelligence: 9, wisdom: 11, charisma: 15,
+    initial_class: Sheet.initial_classes[:barbarian]
+  }
+}
+
+seed_process('sheet', sheets_data)

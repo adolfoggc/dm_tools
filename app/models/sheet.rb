@@ -1,4 +1,6 @@
 class Sheet < ApplicationRecord
+  validates :background, :initial_class, presence: true
+  before_save :initial_hp
 
   enum alignment: {
     lg: 0,
@@ -71,5 +73,21 @@ class Sheet < ApplicationRecord
 
   def modifier(ability)
     (ability/2) - 5
+  end
+
+  private
+  def initial_hp
+    self.hp = modifier(constitution)
+
+    case initial_class
+    when ['1', '2', '3', '5', '8', '10']
+      self.hp += 8
+    when ['4', '6', '7']
+      self.hp += 10
+    when ['9', '11']
+      self.hp += 6
+    else
+      self.hp += 12
+    end
   end
 end

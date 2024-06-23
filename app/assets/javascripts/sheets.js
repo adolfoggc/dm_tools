@@ -3,6 +3,7 @@ $(function(){
   $("#translations").hide();
   update_race();
   update_class();
+  update_background_skills();
 })
 
 function get_mod(id){
@@ -41,6 +42,12 @@ function update_class(){
   }
 
   $('#class_modifiers').html(msg)
+}
+
+function update_background_skills(){
+  val = $('#sheet_background').val();
+  msg = $('#background_' + val).html()
+  $('#background_modifiers').html(msg)
 }
 
 function get_all_mods(){

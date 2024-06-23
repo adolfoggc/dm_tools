@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_04_184939) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_07_145528) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -93,7 +93,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_04_184939) do
     t.string "name"
     t.string "player_name"
     t.integer "alignment"
-    t.string "background"
+    t.integer "background"
     t.integer "race"
     t.integer "experience"
     t.integer "strength"

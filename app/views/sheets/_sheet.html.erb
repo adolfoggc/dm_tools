@@ -2,29 +2,29 @@
   <div class="row">
     <div class="col ">
       <strong><%= I18n.translate('name').capitalize %>: </strong>
-      <%= sheet.name %>
+      <%= sheet.name&.titleize %>
     </div>
     <div class="col">
       <strong><%= I18n.translate('player_name').capitalize %>: </strong>
-      <%=  sheet.player_name %>
+      <%=  sheet.player_name&.titleize %>
     </div>
     <div class="col">
       <strong><%= I18n.translate('background.background').capitalize %>: </strong>
-      <%= sheet.background %>
+      <%= sheet.background&.titleize %>
     </div>
   </div>
   <div class="row">
     <div class="col">
       <strong><%= I18n.translate('alignment.alignment').capitalize %>: </strong>
-      <%= sheet.alignment %>
+      <%= I18n.translate("alignment.#{sheet.alignment}")&.titleize %>
     </div>
     <div class="col">
       <strong><%= I18n.translate('race.race').capitalize %></strong>
-      <%= sheet.race %>
+      <%= I18n.translate("race.#{sheet.race}")&.titleize %>
     </div>
     <div class="col">
       <strong><%= I18n.translate('class.class').capitalize %></strong>
-      <%= sheet.initial_class %>
+      <%= sheet&.initial_class %>
     </div>
   </div>
 
