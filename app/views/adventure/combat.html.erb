@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-4">
+    <strong><%= label_tag(:chacacters, 'Adicionar personagens:', {class: 'form-label'}) %></strong>
+    <%= select_tag(:chacacters, options_for_select(@char_names2), {class: 'custom-select custom-select-sm form-control form-control-sm'}) %>
+  </div>
+  <div class="col-4">
+  </div>
+  <div class="col-4">
+    <strong><%= label_tag(:npcs, 'Adicionar npcs:', {class: 'form-label'}) %></strong>
+    <%= text_field_tag(:npcs, '', {class: 'form-control form-control-sm'}) %>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-4">
+    <%= button_tag(I18n.t(:add), {type: 'button', class: 'btn btn-primary', onclick: 'func'}) %>
+  </div>
+  <div class="col-4">
+  </div>
+  <div class="col-4">
+    <%= button_tag(I18n.t(:add), {type: 'button', class: 'btn btn-primary', onclick: 'func'}) %>
+  </div>
+</div>
+

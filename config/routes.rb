@@ -23,8 +23,11 @@ Rails.application.routes.draw do
     resources :taverns
     
     get '/', to: 'dashboard#home', as: 'auth_home'
-
+    
     get '/encounter_calculator', to: 'dashboard#encounter_calculator', as: 'encounter_calculator'
-  end
 
+    #adventure
+    get 'adventure/combat'
+  end
+  
 end
