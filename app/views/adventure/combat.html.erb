@@ -1,13 +1,41 @@
 <div class="row">
   <div class="col-4">
-    <strong><%= label_tag(:chacacters, 'Adicionar personagens:', {class: 'form-label'}) %></strong>
-    <%= select_tag(:chacacters, options_for_select(@char_names2), {class: 'custom-select custom-select-sm form-control form-control-sm'}) %>
+    <div class="row">
+      <div class="col-9">
+        <strong><%= label_tag(:player, 'Adicionar personagens:', {class: 'form-label'}) %></strong>
+      </div>
+      <div class="col-3">
+        <strong><%= label_tag(:player_initiative, 'Iniciativa:', {class: 'form-label'}) %></strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+        <%= select_tag(:chacacters, options_for_select(@char_names), {class: 'custom-select custom-select-sm form-control form-control-sm'}) %>
+      </div>
+      <div class="col-3">
+        <%= number_field_tag(:player_initiative, '', {class: 'form-control form-control-sm'}) %>
+      </div>
+    </div>
   </div>
   <div class="col-4">
   </div>
   <div class="col-4">
-    <strong><%= label_tag(:npcs, 'Adicionar npcs:', {class: 'form-label'}) %></strong>
-    <%= text_field_tag(:npcs, '', {class: 'form-control form-control-sm'}) %>
+    <div class="row">
+      <div class="col-9">
+        <strong><%= label_tag(:npcs, 'Adicionar npcs:', {class: 'form-label'}) %></strong>
+      </div>
+      <div class="col-3">
+        <strong><%= label_tag(:npcs_initiative, 'Iniciativa:', {class: 'form-label'}) %></strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+        <%= text_field_tag(:npcs, '', {class: 'form-control form-control-sm'}) %>
+      </div>
+      <div class="col-3">
+        <%= number_field_tag(:npcs_initiative, '', {class: 'form-control form-control-sm'}) %>
+      </div>
+    </div>
   </div>
 </div>
 <br>
@@ -19,6 +47,45 @@
   </div>
   <div class="col-4">
     <%= button_tag(I18n.t(:add), {type: 'button', class: 'btn btn-primary', onclick: 'func'}) %>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-4">
+    <%= button_tag('Próxima Iniciativa', {type: 'button', class: 'btn btn-primary', onclick: 'func'}) %>
+  </div>
+  <div class="col-4">
+  </div>
+  <div class="col-4">
+    <%= button_tag('Finalizar Combate', {type: 'button', class: 'btn btn-danger position-absolute end-0', onclick: 'func'}) %>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-12">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-11" style="display: flex; align-items: center">
+            abc
+          </div>
+          <div class="col-1 btn btn-danger">
+            X
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item bg-primary text-white">
+        <div class="row">
+          <div class="col-11" style="display: flex; align-items: center">
+            def
+          </div>
+          <div class="col-1 btn btn-danger">
+            X
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">ghi</li>
+    </ul>
   </div>
 </div>
 
