@@ -15,3 +15,4 @@
 //= link base.css
 //= link sheets.css
 //= link sheets.js
+//= link combat.js
